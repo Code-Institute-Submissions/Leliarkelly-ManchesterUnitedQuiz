@@ -1,0 +1,156 @@
+[
+  {
+    "question": "David Beckham scored 85 goals. How many of his tally were free-kicks?",
+    "category": "Player",
+    "optiona": "14",
+    "optionb": "20",
+    "optionc": "26",
+    "optiond": "30",
+    "correctanswer": "Benfica",
+    "answer": "c"
+  },
+  {
+    "question": "Marcus Rashford open his goal scoring account in which year",
+    "category": "Player",
+    "optiona": "2015",
+    "optionb": "2016",
+    "optionc": "2017",
+    "optiond": "2018",
+    "correctanswer": "Benfica",
+    "answer": "b"
+  },
+  {
+    "question": "Which player has made the most appearances for United?",
+    "category": "Player",
+    "optiona": "Ryan Giggs",
+    "optionb": "Sir Bobby Charlton",
+    "optionc": "Gary Neville",
+    "optiond": "Bill Foulkes",
+    "correctanswer": "Benfica",
+    "answer": "a"
+  },
+
+  {
+    "question": "How many league titles have Man Utd won?",
+    "category": "Team",
+    "optiona": "13",
+    "optionb": "17",
+    "optionc": "20",
+    "optiond": "23",
+    "correctanswer": "Benfica",
+    "answer": "c"
+  },
+
+  {
+    "question": "Manchester United were formed as Newton Heath in which year?",
+    "category": "Team",
+    "optiona": "1864",
+    "optionb": "1878",
+    "optionc": "1890",
+    "optiond": "1900",
+    "correctanswer": "Benfica",
+    "answer": "b"
+  },
+  {
+    "question": "Who did Wayne Rooney surpass to become Man Utd’s all-time top scorer?",
+    "category": "Player",
+    "optiona": "Denis Law",
+    "optionb": "George Best",
+    "optionc": "Jack Rowley",
+    "optiond": "Sir Bob Charlton",
+    "correctanswer": "Benfica",
+    "answer": "d"
+  },
+  {
+    "question": "Which team did United beat to win the 1968 European Cup final?",
+    "optiona": "Benfica",
+    "optionb": "Juventus",
+    "optionc": "Real Madrid",
+    "optiond": "Saint-Etienne",
+    "category": "Competition",
+    "correctanswer": "Benfica",
+    "answer": "a"
+  },
+
+  {
+    "question": "Who scored Man Utd’s two goals in the 1999 Champions League final?",
+    "optiona": "Beckham and Solskjaer",
+    "optionb": "Giggs and Sheringham",
+    "optionc": "Yorke and Cole",
+    "optiond": "Solshjaer and Sheringham",
+    "correctanswer": "Benfica",
+    "category": "Competition",
+    "answer": "d"
+  },
+  {
+    "question": "How much did Cristiano Ronaldo cost Man Utd in 2003?",
+    "optiona": "£8 million",
+    "optionb": "£10 million",
+    "optionc": "£12 million",
+    "optiond": "£14 million",
+    "correctanswer": "Benfica",
+    "category": "Player",
+    "answer": "c"
+  },
+  {
+    "question": "Who scored United’s winning goal vs Liverpool in the 1996 FA Cup final?",
+    "optiona": "David Beckam",
+    "optionb": "Paul Scholes",
+    "optionc": "Gary Pallister",
+    "optiond": "Eric Cantona",
+    "category": "Competition",
+    "correctanswer": "Benfica",
+    "answer": "d"
+  },
+  {
+    "question": "Who scored Man Utd’s two goals in the 1999 Champions League final?",
+    "optiona": "Beckham and Solskjaer",
+    "optionb": "Giggs and Sheringham",
+    "optionc": "Yorke and Cole",
+    "optiond": "Solshjaer and Sheringham",
+    "category": "Competition",
+    "correctanswer": "Benfica",
+    "answer": "d"
+  },
+  {
+    "category": "Team",
+    "question": "Which two Premier League sides have Man Utd beaten 9-0?",
+    "optiona": "Ipswich Town and Southampton",
+    "optionb": "Ipswich Town and Nottingham Forest",
+    "optionc": "Blackburn Rovers and Nottingham Forest",
+    "optiond": "Debry County and Southampton",
+    "correctanswer": "Benfica",
+    "answer": "a"
+  },
+  {
+    "question": "What is the name of United’s mascot?",
+    "category": "Team",
+    "optiona": "Fred the Red",
+    "optionb": "Dave the Devil",
+    "optionc": "Stretford Ender",
+    "optiond": "Red Devil",
+    "correctanswer": "Benfica",
+    "answer": "a"
+  },
+  {
+    "question": "Where did Man Utd lift the European Cup for the third time in 2008?",
+    "category": "Competitions",
+    "optiona": "Turin",
+    "optionb": "Barcelona",
+    "optionc": "Moscow",
+    "optiond": "Munich",
+    "correctanswer": "Benfica",
+    "answer": "c"
+  },
+
+  {
+    "question": "Man Utd's last Premier League title came in which season?",
+    "category": "Team",
+    "optiona": "2009-10",
+    "optionb": "2010-11",
+    "optionc": "2011-12",
+    "optiond": "2012-13",
+    "correctanswer": "Benfica",
+    "answer": "d"
+  }
+]
