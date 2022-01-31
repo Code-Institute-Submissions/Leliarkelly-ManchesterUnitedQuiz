@@ -4,22 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Quiz Application</title>
+    <title>Manchester United Quiz</title>
   </head>
-<body>
-<div class = "quiz-wrapper" class="background"> 
-  <h2 class="hero-title">United Quiz</h2>     
-    <div class = "category-selector">           
-                <ul class= "quiz-category">
-                    <li id = "players">Players</li>  
-                    <li id = "managers">Team</li>  
-                    <li id = "competitions">Competitions</li>  
-                </ul>     
+  <body>
+<!-- 1. Quiz Container -->
+<div class = "quiz-container" class="background"> 
+  <h2 class="maintitle">United Quiz</h2>     
+  <!-- 1a. Category Container -->
+  <div class = "category-container" id = "category-section">
+     <ul class= "quiz-category">
+      <li id = "players">Players</li>  
+      <li id = "team">Team</li>  
+      <li id = "competitions">Competitions</li>  
+     </ul>     
+  </div>       
+  <!-- 1b Question Container -->
+  <div class="question-container" id = "question-section">
+    <div class="progress">
+        <h2 id="question" class = "question-text">Question text</h2>
+        <h2 id = "your-score"></h2>
+      <div id="progress-bar"></div>
+    </div>
+    <div class = "answers">
+      <ul>
+        <li class="answer" id ="a-option">Answer</li>
+        <li class="answer" id= "b-option">Answer</li>
+        <li class="answer" id= "c-option">Answer</li>
+        <li class="answer" id= "d-option">Answer</li>
+      </ul>
+    </div>
+  </div>
+<!-- 1c Results Container -->
+  <div class = "results-container" id = "results-section">
+    <h2>Your Results</h2>
+    <div class="circle-container">
+      <div class="circle"></div>
+      <h2 id="final-score">Hello</h2>
+      <div class="gradient-circle"></div>
+    </div>
+  </div>
+<!-- 1d Your Results Container -->
+  <div class = "your-results-container" id = "your-results-section">
+    <span id = "show-results">Your Answers
+      <i class="bi bi-plus-circle"></i></span>
+    <div class="restart-btn" role="button">Restart Quiz    
     </div>  
-</div>
-
-
+  </div>
+<!-- 1e Your Answers Container -->
+  <div class = "your-answers-container" id = "your-answers-section">
+    <ul id = "your-answers"></ul>
+  </div>
+</div>  
+<script src="scripttest.js"></script>
 </body>
-  <script src="script.js"></script>
-  
 </html>

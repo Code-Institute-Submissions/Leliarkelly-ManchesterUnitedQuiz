@@ -152,7 +152,7 @@ ul {
   border-radius: 10px;
   font-weight: 500;
   padding: 0.7rem 1.2rem 0.7rem 0.6rem;
-   border: 1.5px solid #c70101;
+  border: 1.5px solid #c70101;
   background-color: lightgray;
   color: #fff;
   transition: all 300ms ease-in-out;
