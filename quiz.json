@@ -6,7 +6,7 @@
     "optionb": "20",
     "optionc": "26",
     "optiond": "30",
-    "correctanswer": "Benfica",
+    "correctanswer": "26",
     "answer": "c"
   },
   {
@@ -16,7 +16,7 @@
     "optionb": "2016",
     "optionc": "2017",
     "optiond": "2018",
-    "correctanswer": "Benfica",
+    "correctanswer": "2016",
     "answer": "b"
   },
   {
@@ -26,7 +26,7 @@
     "optionb": "Sir Bobby Charlton",
     "optionc": "Gary Neville",
     "optiond": "Bill Foulkes",
-    "correctanswer": "Benfica",
+    "correctanswer": "Ryan Giggs",
     "answer": "a"
   },
 
@@ -37,7 +37,7 @@
     "optionb": "17",
     "optionc": "20",
     "optiond": "23",
-    "correctanswer": "Benfica",
+    "correctanswer": "20",
     "answer": "c"
   },
 
@@ -48,7 +48,7 @@
     "optionb": "1878",
     "optionc": "1890",
     "optiond": "1900",
-    "correctanswer": "Benfica",
+    "correctanswer": "1878",
     "answer": "b"
   },
   {
@@ -58,7 +58,7 @@
     "optionb": "George Best",
     "optionc": "Jack Rowley",
     "optiond": "Sir Bob Charlton",
-    "correctanswer": "Benfica",
+    "correctanswer": "Sir Bob Charlton",
     "answer": "d"
   },
   {
@@ -78,7 +78,7 @@
     "optionb": "Giggs and Sheringham",
     "optionc": "Yorke and Cole",
     "optiond": "Solshjaer and Sheringham",
-    "correctanswer": "Benfica",
+    "correctanswer": "Solshjaer and Sheringham",
     "category": "Competition",
     "answer": "d"
   },
@@ -88,7 +88,7 @@
     "optionb": "£10 million",
     "optionc": "£12 million",
     "optiond": "£14 million",
-    "correctanswer": "Benfica",
+    "correctanswer": "£12 million",
     "category": "Player",
     "answer": "c"
   },
@@ -99,7 +99,7 @@
     "optionc": "Gary Pallister",
     "optiond": "Eric Cantona",
     "category": "Competition",
-    "correctanswer": "Benfica",
+    "correctanswer": "Eric Cantona",
     "answer": "d"
   },
   {
@@ -109,7 +109,7 @@
     "optionc": "Yorke and Cole",
     "optiond": "Solshjaer and Sheringham",
     "category": "Competition",
-    "correctanswer": "Benfica",
+    "correctanswer": "Solshjaer and Sheringham",
     "answer": "d"
   },
   {
@@ -119,7 +119,7 @@
     "optionb": "Ipswich Town and Nottingham Forest",
     "optionc": "Blackburn Rovers and Nottingham Forest",
     "optiond": "Debry County and Southampton",
-    "correctanswer": "Benfica",
+    "correctanswer": "Ipswich Town and Southampton",
     "answer": "a"
   },
   {
@@ -129,7 +129,7 @@
     "optionb": "Dave the Devil",
     "optionc": "Stretford Ender",
     "optiond": "Red Devil",
-    "correctanswer": "Benfica",
+    "correctanswer": "Fred the Red",
     "answer": "a"
   },
   {
@@ -139,7 +139,7 @@
     "optionb": "Barcelona",
     "optionc": "Moscow",
     "optiond": "Munich",
-    "correctanswer": "Benfica",
+    "correctanswer": "Moscow",
     "answer": "c"
   },
 
@@ -150,7 +150,7 @@
     "optionb": "2010-11",
     "optionc": "2011-12",
     "optiond": "2012-13",
-    "correctanswer": "Benfica",
+    "correctanswer": "2012-13",
     "answer": "d"
   }
 ]
