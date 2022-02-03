@@ -1,18 +1,24 @@
-const questionContainer = document.getElementById("question-section");
+
+// section1a - Category Container - display on page load
 const categoryContainer = document.getElementById("category-section");
+// section 1b Question Container --> - display after category is selected
+const questionContainer = document.getElementById("question-section");
+// <!-- 1c Results Container -- diaplsyed after 5 questions completed
 const resultsContainer = document.getElementById("results-section");
+// <!-- 1d Your Results Container -- displayed after 5 questions completed
 const yourResultsContainer = document.getElementById("your-results-section");
+// <!-- 1e Your Answers Container --> displayed if show result button selected
 const yourAnswersContainer = document.getElementById("your-answers-section");
+// Show answers - Display given answers on click 
+const showAnswers = document.getElementById("show-results");
+// populates answers into DOM
 const yourAnswers = document.getElementById("your-answers");
-const submitButton = document.getElementById("submit");
 const question = document.getElementById("question");
-const answers = document.getElementById("your-results-detail")
+const answers = document.getElementById("your-results-detail");
 const finalScore = document.getElementById("final-score");
 const gradientCircle = document.querySelector(".gradient-circle");
-const restartQuiz = document.querySelector(".restart-btn");
-const showAnswers = document.getElementById("show-results");
 console.log(showAnswers);
-//Quiz category
+
 
 const playerCategory = document.getElementById("players");
 const teamCategory = document.getElementById("team");
@@ -30,13 +36,13 @@ const categorySelector = document.getElementById("category-selector");
 const questionSection = document.getElementById("question-section");
 const finalscore = document.getElementById("your-score");
 
-let questioncounter = 0;
-let score = 0;
-let questions = [];
-let completedQuestions = [];
-let position = 0;
-let categoryQuestions = [];
-let questionnum = 0;
+let questionCounter = 0;  // question number
+let score = 0;  //score of correct answers
+let questions = []; // store of all questions
+let completedQuestions = [];  // store for questions that have been completed
+// let position = 0;
+let categoryQuestions = [];  // store for category question fetched
+let questionnum = 0;  // total number of questions fetch per category
 
 function getData(input) {
   fetch("quiz.json")
@@ -45,26 +51,25 @@ function getData(input) {
       questions = data;
       for (var i = 0; i < data.length; i++) {
         const category = data[i].category;
+        questionnum++
         if (category === `${input}`) {
           console.log(data[i]);
-          questionnum ++;
           categoryQuestions.push(data[i]);
         }
       }
       console.log(categoryQuestions);
-    getNewQuestion();
-    categoryContainer.style.display = "none";
-  
+      getNewQuestion();
+      categoryContainer.style.display = "none";
     })
     .catch((err) => console.log(err));
 }
 
 function getNewQuestion() {
-  questioncounter ++;
+  questionCounter++;
   questionContainer.style.display = "block";
   const questionIndex = Math.floor(Math.random() * categoryQuestions.length);
   currentQuestion = categoryQuestions[questionIndex];
-  question.innerHTML = currentQuestion.question;
+  question.innerHTML = `Question ${questionCounter}: ${currentQuestion.question}`;
   optionA.innerText = currentQuestion.optiona;
   optionB.innerText = currentQuestion.optionb;
   optionC.innerText = currentQuestion.optionc;
@@ -84,58 +89,54 @@ options.forEach((item) => {
     const correctAnswer = currentQuestion.answer;
     let resulticon;
     let colour;
-        if (selectedChoice === correctAnswer) {
-          (resulticon = "check"), 
-          (colour = "#007400");
-          position++;
-          score++;
-          positionresult = (position * 100) / questionnum + "%";
-          progress.style.width = (position * 100) / questionnum + "%";
-          gameScore.innerHTML = `${score} of 5`;
-          if(categoryQuestions.length !=0){
-            getNewQuestion();
-          }
-          else {
-            finishGame();          
-            }      
-          }  
-        else if (categoryQuestions.length === 0) {
-          finishGame();}
-        else {
-          (resulticon = "x"), 
-          (colour = "#c70101");
-          position++;
-          positionresult = (position * 100) / questionnum + "%";
-          progress.style.width = (position * 100) / questionnum + "%";
-          gameScore.innerHTML = `${score} of 5`;
-          getNewQuestion();
-        }
-        const compquestion = `
+    if (selectedChoice === correctAnswer) {
+      (resulticon = "check"), (colour = "#007400");
+      // position++;
+      // console.log(position);
+      console.log(questionCounter);
+      score++;
+      positionresult = (questionCounter * 100) / questionnum + "%";
+      progress.style.width = (questionCounter * 100) / questionnum + "%";
+      gameScore.innerHTML = `${score} of 5`;
+      if (categoryQuestions.length != 0) {
+        getNewQuestion();
+      } else {
+        finishGame();
+      }
+    } else if (categoryQuestions.length === 0) {
+      finishGame();
+    } else {
+      (resulticon = "x"), (colour = "#c70101");
+      // position++;
+      positionresult = (questionCounter * 100) / questionnum + "%";
+      progress.style.width = (questionCounter * 100) / questionnum + "%";
+      gameScore.innerHTML = `${score} of 5`;
+      getNewQuestion();
+    }
+    const compquestion = `
             <li> ${question} 
                 <p> The correct answer is ${answertext}</p> 
                 <p> Your answer was ${youranswer}</p>
                     <span><i class="bi bi-${resulticon}-circle" style="font-size: 2rem; color: ${colour};"></i></span></li> `;
-        //create an element and append question and answers to
-        yourAnswers.innerHTML += compquestion;  
-      });
+    //create an element and append question and answers to
+    yourAnswers.innerHTML += compquestion;
+  });
 });
 
 function finishGame() {
-  questionContainer.style.display = "none"; 
-  resultsContainer.style.display = "block";       
+  questionContainer.style.display = "none";
+  resultsContainer.style.display = "block";
   yourResultsContainer.style.display = "block";
-  const Percentscore = (score/5) * 100 + "%";
-  gradientCircle.style.background = `conic-gradient(#c70101 0%, #c70101 ${Percentscore} ,#fff ${Percentscore}, #fff 100%)`;
-  finalScore.innerHTML = `Your score is <br> ${score} out of 5`;           
+  const percentScore = (score / 5) * 100 + "%";
+  gradientCircle.style.background = `conic-gradient(#c70101 0%, #c70101 ${percentScore} ,#fff ${percentScore}, #fff 100%)`;
+  finalScore.innerHTML = `Your score is <br> ${score} out of 5`;
 }
 
-function showResults(){
-  console.log("hello");
+function showResults() {
   yourAnswersContainer.style.display = "block";
 }
 
 playerCategory.addEventListener("click", () => getData("Player"));
 teamCategory.addEventListener("click", () => getData("Team"));
 competitionCategory.addEventListener("click", () => getData("Competition"));
-restartQuiz.addEventListener("click", () => restartGame());
 showAnswers.addEventListener("click", () => showResults());

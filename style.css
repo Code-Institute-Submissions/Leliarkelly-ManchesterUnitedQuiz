@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
 
 * {
@@ -6,11 +6,11 @@
 }
 
 body {
-  background: url("ManchesterUnitedHomePage_Edited.jpg") no-repeat center fixed;
+  background: url("ManchesterUnitedHomePage3.jpg") no-repeat center fixed;
   background-color: #fff;
   background-size: cover;
   display: flex;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   flex-direction: column;
   align-items: center;
   font-weight: 500;
@@ -19,22 +19,26 @@ body {
   color: #fff;
 }
 
-/* 1a Quiz Container */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* 1 Quiz Container */
 
 .maintitle {
-  font-size: 56px; 
+  font-size: 56px;
   color: #fff;
   background-color: #c70101;
-  font-family: BebasNeueBold,Helvetica,sans-serif;
+  font-family: BebasNeueBold, Helvetica, sans-serif;
 }
 
 h2 {
   font-size: 16px;
   color: #c70101;
-  font-family: BebasNeueBold,Helvetica,sans-serif;
+  font-family: BebasNeueBold, Helvetica, sans-serif;
   text-align: center;
 }
-
 
 .quiz-container {
   background-color: transparent;
@@ -43,8 +47,14 @@ h2 {
   width: 400px;
   margin: 0px auto;
   overflow: hidden;
+  background-color: aquamarine;
 }
 
+/* 1a Category container */
+.category-container {
+  background-color: aqua;
+  display: block;
+}
 
 .category-container li {
   width: 100%;
@@ -56,7 +66,7 @@ h2 {
   background-color: #c70101;
   color: #fff;
   transition: all 300ms ease-in-out;
-  font-family: SourceSansProSemiBold,Helvetica,sans-serif;
+  font-family: SourceSansProSemiBold, Helvetica, sans-serif;
   line-height: 50px;
   padding: 0 32px;
   text-align: center;
@@ -64,30 +74,36 @@ h2 {
   cursor: pointer;
 }
 
+/* 1b Question container */
+
+.question-container {
+  background-color: blue;
+  display: none;
+  padding: 10px;
+  margin: 20px;
+}
+
 .progress {
+  background-color: cadetblue;
   width: 100%;
   max-width: 600px;
   margin: 10px auto 0;
   display: block;
   position: relative;
-  text-align: center;  
+  text-align: center;
 }
 
 #progress-bar {
+  background-color: crimson;
   position: absolute;
-  background:#c70101;
-  height: 10px;  
-  transition: width 0.5s ease-in-out; 
-}
-
-.answers{
-  padding-top: 20px;
+  background: #c70101;
+  height: 10px;
+  transition: width 0.5s ease-in-out;
 }
 
 .question-text {
   color: #fff;
-  /* background-color: #ccc; */
-  font-family: BebasNeueBold,Helvetica,sans-serif;
+  font-family: BebasNeueBold, Helvetica, sans-serif;
   text-align: center;
   width: 100%;
   margin-bottom: 29px;
@@ -95,13 +111,17 @@ h2 {
   line-height: 24px;
 }
 
+.answers {
+  padding-top: 10px;
+  background-color: yellow;
+}
 
 .answers li {
   margin: 10px, 10px;
   text-align: center;
   width: 100%;
   margin-bottom: 25px;
-  font-family: SourceSansProRegular,Helvetica,sans-serif;
+  font-family: SourceSansProRegular, Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 2px;
@@ -114,7 +134,6 @@ h2 {
   color: #fff;
   transition: all 300ms ease-in-out;
   align-items: center;
-  
 }
 
 .answers li:hover {
@@ -122,30 +141,27 @@ h2 {
   transform: translate(-0.2rem);
   transition: transform 150ms;
   color: #fff;
-
 }
 
-li:focus {
-  outline: none;
-  background-color: #c70101;
+/* <!-- 1c Results Container --> */
+
+.results-container {
+  background-color: crimson;
+  padding: 10px;
+  margin: 20px;
+  display: none;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-
-.result-container ul{
+.result-container ul {
   padding-top: 30px;
 }
 
-.result-container li{
+.result-container li {
   margin: 0px, 0px;
   text-align: center;
   width: 100%;
   margin-bottom: 25px;
-  font-family: SourceSansProRegular,Helvetica,sans-serif;
+  font-family: SourceSansProRegular, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 2px;
@@ -156,24 +172,11 @@ ul {
   background-color: lightgray;
   color: #fff;
   transition: all 300ms ease-in-out;
-  align-items: center;  
-}
-
-.question-container{
-  display: block;
-}
-.your-answers-container{
-  display: block;
-}
-.results-container{
-  display:block;
-}
-.your-results-container{
-  display: block;
+  align-items: center;
 }
 
 .circle-container {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -201,30 +204,55 @@ ul {
   border-radius: 50%;
   position: absolute;
   top: -10px;
-  left: -10px;  
-
+  left: -10px;
 }
 
-
-.your-result-btn {
-  border: 1px solid rgba(199,1,1,.2);
-  background: #c70101;
-  z-index: 9;
-  position: relative;
-  margin-right: 10px;
+/* <!-- 1d Your Results Container --> */
+.your-results-container {
+  background-color: purple;
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  display: none;
+}
+.show-results {
+  margin-top: 20px;
+  background-color: transparent;
   text-align: center;
-  font-family: SourceSansProRegular,Helvetica,sans-serif;
+}
+
+button {
+  border: 1px solid rgba(199, 1, 1, 0.2);
+  background: #c70101;
+  /* z-index: 9; */
+  position: relative;
+  /* margin-right: 10px; */
+  margin-right: 30px;
+  margin-left: 30px;
+  text-align: center;
+  font-family: SourceSansProRegular, Helvetica, sans-serif;
   font-size: 20px;
   border-radius: 10px;
   font-weight: 500;
-  padding: 0.7rem 1.2rem 0.7rem 0.6rem;
+  /* padding: 0.7rem 1.2rem 0.7rem 0.6rem; */
   cursor: pointer;
 }
 
-.your-answers{
+/* 1e Your answers container */
+
+.your-answers-container {
+  background-color: darkgreen;
+  padding: 10px;
+  margin: 20px;
+  display: none;
+}
+
+.your-answers {
   margin-top: 40px;
-  cursor:pointer;
-  font-family: BebasNeueBold,Helvetica,sans-serif;
+  cursor: pointer;
+  font-family: BebasNeueBold, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #c70101;
@@ -232,9 +260,7 @@ ul {
   text-align: center;
 }
 
-.your-answers span{
+.your-answers span {
   font-style: normal;
   margin-left: 2%;
 }
-
-
