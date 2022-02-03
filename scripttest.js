@@ -19,7 +19,6 @@ const finalScore = document.getElementById("final-score");
 const gradientCircle = document.querySelector(".gradient-circle");
 console.log(showAnswers);
 
-
 const playerCategory = document.getElementById("players");
 const teamCategory = document.getElementById("team");
 const competitionCategory = document.getElementById("competitions");
@@ -30,18 +29,13 @@ const optionC = document.getElementById("c-option");
 const optionD = document.getElementById("d-option");
 const options = Array.from(document.getElementsByClassName("answer"));
 const progress = document.querySelector("#progress-bar");
-
-//show and hide
-const categorySelector = document.getElementById("category-selector");
-const questionSection = document.getElementById("question-section");
 const finalscore = document.getElementById("your-score");
 
 let questionCounter = 0;  // question number
-let score = 0;  //score of correct answers
-let questions = []; // store of all questions
+let score = 0;  //correct answers
+let questions = []; // store of all questions from JSON files
+let categoryQuestions = [];  // Array of category by question
 let completedQuestions = [];  // store for questions that have been completed
-// let position = 0;
-let categoryQuestions = [];  // store for category question fetched
 let questionnum = 0;  // total number of questions fetch per category
 
 function getData(input) {
@@ -51,9 +45,9 @@ function getData(input) {
       questions = data;
       for (var i = 0; i < data.length; i++) {
         const category = data[i].category;
-        questionnum++
         if (category === `${input}`) {
           console.log(data[i]);
+          questionnum++;
           categoryQuestions.push(data[i]);
         }
       }
@@ -91,9 +85,8 @@ options.forEach((item) => {
     let colour;
     if (selectedChoice === correctAnswer) {
       (resulticon = "check"), (colour = "#007400");
-      // position++;
-      // console.log(position);
       console.log(questionCounter);
+      console.log(questionnum);
       score++;
       positionresult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
@@ -107,7 +100,7 @@ options.forEach((item) => {
       finishGame();
     } else {
       (resulticon = "x"), (colour = "#c70101");
-      // position++;
+
       positionresult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       gameScore.innerHTML = `${score} of 5`;
