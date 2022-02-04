@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url("ManchesterUnitedHomePage3.jpg") no-repeat center fixed;
+  background: url("ManchesterUnitedHomePage4.jpg") no-repeat center fixed;
   background-color: #fff;
   background-size: cover;
   display: flex;
@@ -17,6 +17,7 @@ body {
   justify-content: center;
   margin: 0;
   color: #fff;
+  
 }
 
 ul {
@@ -27,7 +28,7 @@ ul {
 /* 1 Quiz Container */
 
 .maintitle {
-  font-size: 56px;
+  font-size: 48px;
   color: #fff;
   background-color: #c70101;
   font-family: BebasNeueBold, Helvetica, sans-serif;
@@ -52,7 +53,7 @@ h2 {
 
 /* 1a Category container */
 .category-container {
-  background-color: aqua;
+  /* background-color: aqua; */
   display: block;
 }
 
@@ -70,17 +71,25 @@ h2 {
   line-height: 50px;
   padding: 0 32px;
   text-align: center;
-  margin: 0.9rem 0;
   cursor: pointer;
 }
 
 /* 1b Question container */
 
 .question-container {
-  background-color: blue;
+  /* background-color: blue; */
   display: none;
   padding: 10px;
-  margin: 20px;
+  margin-top: 0px;
+  /* margin: 20px; */
+}
+
+div.image {
+  width: 400px; /*width of your image*/
+  height: 200px; /*width of your image*/
+  background-image: url('David_Beckham_Free_Kick.jpeg');
+  margin:0; /* If you want no margin */
+  padding:0; /*if your want to padding */
 }
 
 .progress {
@@ -106,7 +115,7 @@ h2 {
   font-family: BebasNeueBold, Helvetica, sans-serif;
   text-align: center;
   width: 100%;
-  margin-bottom: 29px;
+  /* margin-bottom: 29px; */
   font-size: 22px;
   line-height: 24px;
 }
@@ -176,6 +185,7 @@ h2 {
 }
 
 .circle-container {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,8 +197,8 @@ h2 {
 }
 
 .circle {
-  background-color: #fff;
-  height: 100%;
+  background-color: #010f1c;
+    height: 100%;
   width: 100%;
   border-radius: 50%;
   position: absolute;
@@ -205,6 +215,7 @@ h2 {
   position: absolute;
   top: -10px;
   left: -10px;
+  background-color: transparent;
 }
 
 /* <!-- 1d Your Results Container --> */
@@ -241,8 +252,8 @@ button {
 
 /* 1e Your answers container */
 
-.your-answers-container {
-  background-color: #c70101;
+.your-answers-container{
+  /* background-color: #c70101; */
   display: flex;
   flex-direction: column;
   align-content: center;  
@@ -257,29 +268,16 @@ button {
   color: #fff;
   font-style: normal;
   text-align: left;
+  border-radius: 5px;
 }
 
 #your-answers li{
+  padding-left: 5px;
   font-family: "Bebas Neue", cursive;
-  width: 100%;
-  border: 1px solid grey;    
-  }
 
-/* 
-.rules {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #333;
-    color: #fff;
-    min-height: 100vh;
-    width: 400px;
-    padding: 20px;
-    line-height: 1.5;
-    transform: translateX(-400px);
-    transition: transform 1s ease-in-out;
-  }
+  border: 1px solid grey;   
+  border-radius: 5px; 
+  color: #c70101;
+  background-color: gainsboro;
   
-.rules.show {
-    transform: translateX(0);
-  } */
+ }

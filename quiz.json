@@ -1,13 +1,14 @@
 [
   {
     "question": "David Beckham scored 85 goals. How many of his tally were free-kicks?",
-    "category": "Player1",
+    "category": "Player",
     "optiona": "14",
     "optionb": "20",
     "optionc": "26",
     "optiond": "30",
     "correctanswer": "26",
-    "answer": "c"
+    "answer": "c",
+    "image": "David_Beckham_Free_Kick.jpeg"
   },
   {
     "question": "Marcus Rashford open his goal scoring account in which year",
@@ -53,7 +54,7 @@
   },
   {
     "question": "Who did Wayne Rooney surpass to become Man Utd’s all-time top scorer?",
-    "category": "Player",
+    "category": "Player2",
     "optiona": "Denis Law",
     "optionb": "George Best",
     "optionc": "Jack Rowley",
@@ -132,7 +133,7 @@
     "correctanswer": "Fred the Red",
     "answer": "a"
   },
-  
+
   {
     "question": "Where did Man Utd lift the European Cup for the third time in 2008?",
     "category": "Competition",
@@ -142,6 +143,7 @@
     "optiond": "Munich",
     "correctanswer": "Moscow",
     "answer": "c"
+    
   },
 
   {

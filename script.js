@@ -1,11 +1,22 @@
-const categoryContainer = document.getElementById("category-selector");
-const quizContainer = document.getElementById("question-section");
-const resultsContainer = document.getElementById("results");
+// section1a - Category Container - display on page load
+const categoryContainer = document.getElementById("category-section");
+// section 1b Question Container --> - display after category is selected
+const questionContainer = document.getElementById("question-section");
+// <!-- 1c Results Container -- diaplsyed after 5 questions completed
+const resultsContainer = document.getElementById("results-section");
+// <!-- 1d Your Results Container -- displayed after 5 questions completed
+const yourResultsContainer = document.getElementById("your-results-section");
+// <!-- 1e Your Answers Container --> displayed if show result button selected
+const yourAnswersContainer = document.getElementById("your-answers-section");
+// Show answers - Display given answers on click 
+const showAnswers = document.getElementById("show-results");
+// populates answers into DOM
+const yourAnswers = document.getElementById("your-answers");
 const question = document.getElementById("question");
-const finish = document.getElementById("finish");
+const answers = document.getElementById("your-results-detail");
 const finalScore = document.getElementById("final-score");
-
-//category
+const gradientCircle = document.querySelector(".gradient-circle");
+console.log(showAnswers);
 
 const playerCategory = document.getElementById("players");
 const teamCategory = document.getElementById("team");
@@ -15,21 +26,19 @@ const optionA = document.getElementById("a-option");
 const optionB = document.getElementById("b-option");
 const optionC = document.getElementById("c-option");
 const optionD = document.getElementById("d-option");
+const image = document.getElementById("image");
 const options = Array.from(document.getElementsByClassName("answer"));
 const progress = document.querySelector("#progress-bar");
-
-//show and hide
-const categorySelector = document.getElementById("category-selector");
-const questionSection = document.getElementById("question-section");
 const finalscore = document.getElementById("your-score");
 
-let questioncounter = 0;
-let score = 0;
-let questions = [];
-let completedQuestions = [];
-let position = 0;
-let categoryQuestions = [];
-let questionnum = 0;
+let questionCounter = 0;  // question number
+let score = 0;  //correct answers
+let questions = []; // store of all questions from JSON files
+let categoryQuestions = [];  // Array of category by question
+let completedQuestions = [];  // store for questions that have been completed
+let questionnum = 0;  // total number of questions fetch per category
+let currentQuestion;
+let positionResult;
 
 function getData(input) {
   fetch("quiz.json")
@@ -40,29 +49,28 @@ function getData(input) {
         const category = data[i].category;
         if (category === `${input}`) {
           console.log(data[i]);
-          questionnum ++;
+          questionnum++;
           categoryQuestions.push(data[i]);
         }
       }
       console.log(categoryQuestions);
       getNewQuestion();
       categoryContainer.style.display = "none";
-      finish.style.display = "none";
     })
     .catch((err) => console.log(err));
 }
 
 function getNewQuestion() {
-  questioncounter ++;
-  quizContainer.style.display = "block";
+  questionCounter++;
+  questionContainer.style.display = "block";
   const questionIndex = Math.floor(Math.random() * categoryQuestions.length);
-  console.log(questionIndex);
   currentQuestion = categoryQuestions[questionIndex];
-  question.innerHTML = currentQuestion.question;
+  question.innerHTML = `Question ${questionCounter}: ${currentQuestion.question}`;
   optionA.innerText = currentQuestion.optiona;
   optionB.innerText = currentQuestion.optionb;
   optionC.innerText = currentQuestion.optionc;
   optionD.innerText = currentQuestion.optiond;
+  image.innerHTML = currentQuestion.image;
   const completedQuestion = categoryQuestions.splice(questionIndex, 1);
   console.log(completedQuestion);
   completedQuestions.push(...completedQuestion);
@@ -76,51 +84,75 @@ options.forEach((item) => {
     const youranswer = e.target.innerText;
     const answertext = currentQuestion.correctanswer;
     const correctAnswer = currentQuestion.answer;
-    let result;
+    let resulticon;
     let colour;
-    if (selectedChoice === correctAnswer) {
-      (result = "check"), (colour = "#007400");
-    } else {
-      (result = "x"), (colour = "#c70101");
-    }
-    const compquestion = `<li> ${question} <p> The correct answer is ${answertext}</p> <p> your answer was ${youranswer}</p>
-        <span><i class="bi bi-${result}-circle" style="font-size: 2rem; color: ${colour};"></i></span>
-        </li> `;
-    //create an element and append question and answer to
-    console.log(compquestion);
-    yourResults.innerHTML += compquestion;
-    if (categoryQuestions.length === 0) {
-        quizContainer.style.display = "none";
-        finishGame();
-    } else if (selectedChoice === correctAnswer) {
-      position++;
+    if (categoryQuestions.length === 0 && selectedChoice === correctAnswer) {
+      resulticon = "check", colour = "#007400";
+      console.log(questionCounter);
+      console.log(questionnum);
       score++;
-      console.log(position);
-      positionresult = (position * 100) / questionnum + "%";
-      console.log(positionresult);
-      progress.style.width = (position * 100) / questionnum + "%";
-      $('.gradient-circle').css({'background': 'conic-gradient(#c70101 0%, #c70101 `${postionresult}`)'});
-      getNewQuestion();
-      
+      positionResult = (questionCounter * 100) / questionnum + "%";
+      progress.style.width = (questionCounter * 100) / questionnum + "%";
       gameScore.innerHTML = `${score} of 5`;
-    } else {
-      position++;
-      positionresult = (position * 100) / questionnum + "%";
-      progress.style.width = (position * 100) / questionnum + "%";
-      $('.gradient-circle').css({'background': 'conic-gradient(#c70101 0%, #c70101 `${postionresult}`)'});
+      finishGame();
+    }
+    else if (categoryQuestions.length === 0 && selectedChoice != correctAnswer){
+      resulticon = "x", colour = "red";
+      positionResult = (questionCounter * 100) / questionnum + "%";
+      progress.style.width = (questionCounter * 100) / questionnum + "%";
+      gameScore.innerHTML = `${score} of 5`;
+      finishGame();
+    }
+    else if (selectedChoice === correctAnswer) {
+      resulticon = "check", colour = "#007400";
+      console.log(questionCounter);
+      console.log(questionnum);
+      score++;
+      positionResult = (questionCounter * 100) / questionnum + "%";
+      progress.style.width = (questionCounter * 100) / questionnum + "%";
+      gameScore.innerHTML = `${score} of 5`;      
+      getNewQuestion();
+        } 
+    else {
+      resulticon = "x", colour = "red";
+      positionResult = (questionCounter * 100) / questionnum + "%";
+      progress.style.width = (questionCounter * 100) / questionnum + "%";
       gameScore.innerHTML = `${score} of 5`;
       getNewQuestion();
     }
+    console.log(resulticon);
+    console.log(colour);    
+    const compquestion = `
+    <li>${question} 
+    <p> The correct answer is ${answertext}</p> 
+    <p> Your answer was ${youranswer} &emsp; <i class="bi bi-${resulticon}-circle" style="color: ${colour};"></i></p>
+      </li> `;
+    yourAnswers.innerHTML += compquestion;  
   });
 });
-      
 
 function finishGame() {
-  finish.style.display = "block";
-  finalScore.innerText = `${score} of 5`;
-console.log(score);  
+  questionContainer.style.display = "none";
+  resultsContainer.style.display = "block";
+  yourResultsContainer.style.display = "block";
+  const percentScore = (score / 5) * 100 + "%";
+  gradientCircle.style.background = `conic-gradient(#c70101 0%, #c70101 ${percentScore} ,#fff ${percentScore}, #fff 100%)`;
+  finalScore.innerHTML = `You scored <br> ${score} out of 5`;
 }
+
+function showResults() {
+  if (yourAnswersContainer.style.display === "none") {
+    yourAnswersContainer.style.display = "block";
+  } else {
+    yourAnswersContainer.style.display = "none";
+  }
+}
+
+
+
+
 
 playerCategory.addEventListener("click", () => getData("Player"));
 teamCategory.addEventListener("click", () => getData("Team"));
 competitionCategory.addEventListener("click", () => getData("Competition"));
+showAnswers.addEventListener("click", () => showResults());
