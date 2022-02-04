@@ -83,7 +83,7 @@ options.forEach((item) => {
     const correctAnswer = currentQuestion.answer;
     let resulticon;
     let colour;
-    if (selectedChoice === correctAnswer) {
+    if (categoryQuestions.length === 0 & selectedChoice === correctAnswer) {
       (resulticon = "check"), (colour = "#007400");
       console.log(questionCounter);
       console.log(questionnum);
@@ -91,15 +91,26 @@ options.forEach((item) => {
       positionresult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       gameScore.innerHTML = `${score} of 5`;
-          if (categoryQuestions.length != 0) {
-                getNewQuestion();
-              } 
-              else {
-                finishGame();
-              }
-    } else if (categoryQuestions.length === 0) {
       finishGame();
-    } else if(correctAnswer != selectedChoice) {
+    }
+    else if (categoryQuestions.length === 0 & selectedChoice != correctAnswer){
+      (resulticon = "x"), (colour = "red");
+      positionresult = (questionCounter * 100) / questionnum + "%";
+      progress.style.width = (questionCounter * 100) / questionnum + "%";
+      gameScore.innerHTML = `${score} of 5`;
+      finishGame();
+    }
+    else if (selectedChoice === correctAnswer) {
+      (resulticon = "check"), (colour = "#007400");
+      console.log(questionCounter);
+      console.log(questionnum);
+      score++;
+      positionresult = (questionCounter * 100) / questionnum + "%";
+      progress.style.width = (questionCounter * 100) / questionnum + "%";
+      gameScore.innerHTML = `${score} of 5`;      
+      getNewQuestion();
+        } 
+    else {
       (resulticon = "x"), (colour = "red");
       positionresult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";

@@ -132,9 +132,10 @@
     "correctanswer": "Fred the Red",
     "answer": "a"
   },
+  
   {
     "question": "Where did Man Utd lift the European Cup for the third time in 2008?",
-    "category": "Competitions",
+    "category": "Competition",
     "optiona": "Turin",
     "optionb": "Barcelona",
     "optionc": "Moscow",
