@@ -47,7 +47,7 @@ h2 {
   width: 400px;
   margin: 0px auto;
   overflow: hidden;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 /* 1a Category container */
@@ -84,7 +84,7 @@ h2 {
 }
 
 .progress {
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
   width: 100%;
   max-width: 600px;
   margin: 10px auto 0;
@@ -94,7 +94,7 @@ h2 {
 }
 
 #progress-bar {
-  background-color: crimson;
+  /* background-color: crimson; */
   position: absolute;
   background: #c70101;
   height: 10px;
@@ -113,7 +113,7 @@ h2 {
 
 .answers {
   padding-top: 10px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .answers li {
@@ -146,7 +146,7 @@ h2 {
 /* <!-- 1c Results Container --> */
 
 .results-container {
-  background-color: crimson;
+  /* background-color: crimson; */
   padding: 10px;
   margin: 20px;
   display: none;
@@ -209,58 +209,77 @@ h2 {
 
 /* <!-- 1d Your Results Container --> */
 .your-results-container {
-  background-color: purple;
+  /* background-color: purple; */
   padding: 10px;
   margin: 20px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-content: center; */
   display: none;
+  text-align: center;
 }
 .show-results {
   margin-top: 20px;
   background-color: transparent;
-  text-align: center;
+  /* text-align: center;   */
+  cursor:pointer
+
 }
 
 button {
   border: 1px solid rgba(199, 1, 1, 0.2);
   background: #c70101;
-  /* z-index: 9; */
-  position: relative;
-  /* margin-right: 10px; */
-  margin-right: 30px;
-  margin-left: 30px;
-  text-align: center;
   font-family: SourceSansProRegular, Helvetica, sans-serif;
   font-size: 20px;
   border-radius: 10px;
   font-weight: 500;
-  /* padding: 0.7rem 1.2rem 0.7rem 0.6rem; */
   cursor: pointer;
+  align-self: center;
 }
+
+
 
 /* 1e Your answers container */
 
 .your-answers-container {
-  background-color: darkgreen;
-  padding: 10px;
-  margin: 20px;
-  display: none;
+  background-color: #c70101;
+  display: flex;
+  flex-direction: column;
+  align-content: center;  
+  display:none;
+  
 }
 
-.your-answers {
-  margin-top: 40px;
-  cursor: pointer;
-  font-family: BebasNeueBold, Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #c70101;
+
+#your-answers {
+  font-family: "Bebas Neue", cursive;
+  font-size: 10px;
+  color: #fff;
   font-style: normal;
-  text-align: center;
+  text-align: left;
 }
 
-.your-answers span {
-  font-style: normal;
-  margin-left: 2%;
-}
+#your-answers li{
+  font-family: "Bebas Neue", cursive;
+  width: 100%;
+  border: 1px solid grey;    
+  }
+
+/* 
+.rules {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333;
+    color: #fff;
+    min-height: 100vh;
+    width: 400px;
+    padding: 20px;
+    line-height: 1.5;
+    transform: translateX(-400px);
+    transition: transform 1s ease-in-out;
+  }
+  
+.rules.show {
+    transform: translateX(0);
+  } */

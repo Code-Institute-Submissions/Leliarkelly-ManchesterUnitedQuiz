@@ -91,28 +91,30 @@ options.forEach((item) => {
       positionresult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       gameScore.innerHTML = `${score} of 5`;
-      if (categoryQuestions.length != 0) {
-        getNewQuestion();
-      } else {
-        finishGame();
-      }
+          if (categoryQuestions.length != 0) {
+                getNewQuestion();
+              } 
+              else {
+                finishGame();
+              }
     } else if (categoryQuestions.length === 0) {
       finishGame();
-    } else {
-      (resulticon = "x"), (colour = "#c70101");
-
+    } else if(correctAnswer != selectedChoice) {
+      (resulticon = "x"), (colour = "red");
       positionresult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       gameScore.innerHTML = `${score} of 5`;
       getNewQuestion();
     }
+    console.log(resulticon);
+    console.log(colour);
+    
     const compquestion = `
-            <li> ${question} 
-                <p> The correct answer is ${answertext}</p> 
-                <p> Your answer was ${youranswer}</p>
-                    <span><i class="bi bi-${resulticon}-circle" style="font-size: 2rem; color: ${colour};"></i></span></li> `;
-    //create an element and append question and answers to
-    yourAnswers.innerHTML += compquestion;
+    <li>${question} 
+    <p> The correct answer is ${answertext}</p> 
+    <p> Your answer was ${youranswer} &emsp; <i class="bi bi-${resulticon}-circle" style="color: ${colour};"></i></p>
+      </li> `
+    yourAnswers.innerHTML += compquestion;  
   });
 });
 

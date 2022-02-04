@@ -1,7 +1,7 @@
 [
   {
     "question": "David Beckham scored 85 goals. How many of his tally were free-kicks?",
-    "category": "Player",
+    "category": "Player1",
     "optiona": "14",
     "optionb": "20",
     "optionc": "26",
@@ -11,7 +11,7 @@
   },
   {
     "question": "Marcus Rashford open his goal scoring account in which year",
-    "category": "Player",
+    "category": "Player1",
     "optiona": "2015",
     "optionb": "2016",
     "optionc": "2017",
@@ -21,7 +21,7 @@
   },
   {
     "question": "Which player has made the most appearances for United?",
-    "category": "Player",
+    "category": "Player1",
     "optiona": "Ryan Giggs",
     "optionb": "Sir Bobby Charlton",
     "optionc": "Gary Neville",
