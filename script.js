@@ -1,4 +1,5 @@
 /* jshint esversion: 6 */
+window.location.reload();
 
 const categoryContainer = document.getElementById("category-section");
 // section1a - Category Container - quiz categories
@@ -78,17 +79,17 @@ function getData(input) {
 
 //this function will check if there is an image in the JSON and add to DOM if true.
 
-function checkImage() {  
+function checkImage() {
   console.log(currentQuestion.image);
-  if(currentQuestion.image !== undefined){
-      document.body.style.backgroundImage = 'none';
-          imageURL = currentQuestion.image;
-          console.log(imageURL);
-          image.style.display = "block";
-          image.style.backgroundImage = `url(images/${imageURL})`;
-        }
+  if (currentQuestion.image !== undefined) {
+    document.body.style.backgroundImage = "none";
+    imageURL = currentQuestion.image;
+    console.log(imageURL);
+    image.style.display = "block";
+    image.style.backgroundImage = `url(images/${imageURL})`;
   }
-            
+}
+
 function getNewQuestion() {
   gameScore.innerHTML = `${score} of ${questionnum}`;
   questionCounter++;
