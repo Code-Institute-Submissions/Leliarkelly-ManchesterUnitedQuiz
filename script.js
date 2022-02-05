@@ -1,5 +1,5 @@
 /* jshint esversion: 6 */
-window.location.reload();
+// window.location.reload();
 
 const categoryContainer = document.getElementById("category-section");
 // section1a - Category Container - quiz categories
