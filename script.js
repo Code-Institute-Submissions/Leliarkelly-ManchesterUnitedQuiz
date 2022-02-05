@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 const categoryContainer = document.getElementById("category-section");
 // section1a - Category Container - quiz categories
 const playerCategory = document.getElementById("players");
@@ -47,6 +49,8 @@ let currentQuestion;
 let positionResult;
 let resulticon;
 let colour;
+// let imageOutput;
+let imageURL;
 
 //The getData function fetches question date from quiz.json and takes as parameter,
 // the category selected and pushes those questions to the completed question array
@@ -73,14 +77,15 @@ function getData(input) {
 
 //this function will check if there is an image in the JSON and add to DOM if true.
 
-function checkImage() {
-  if(imageOutput = 'image' in currentQuestion){
-  document.body.style.backgroundImage = 'none';
+function checkImage() {  
+  console.log(currentQuestion.image);
+  if(currentQuestion.image !== undefined){
+      document.body.style.backgroundImage = 'none';
           imageURL = currentQuestion.image;
           console.log(imageURL);
           image.style.display = "block";
           image.style.backgroundImage = `url(images/${imageURL})`;
-                  }
+        }
   }
             
 function getNewQuestion() {
