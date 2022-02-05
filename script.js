@@ -64,6 +64,7 @@ function getData(input) {
         if (category === `${input}`) {
           console.log(data[i]);
           questionnum++;
+          console.log(questionnum);
           categoryQuestions.push(data[i]);
         }
       }
@@ -89,11 +90,15 @@ function checkImage() {
   }
             
 function getNewQuestion() {
+  gameScore.innerHTML = `${score} of ${questionnum}`;
   questionCounter++;
   questionContainer.style.display = "block";
   image.style.display = "none";
   document.body.style.backgroundImage = "url('ManchesterUnitedHomePage4.jpg')";
+  console.log(questionnum);
+  console.log(categoryQuestions.length);
   const questionIndex = Math.floor(Math.random() * categoryQuestions.length);
+
   currentQuestion = categoryQuestions[questionIndex];
   question.innerHTML = `Question ${questionCounter}: ${currentQuestion.question}`;
   optionA.innerText = currentQuestion.optiona;
@@ -122,7 +127,7 @@ options.forEach((item) => {
       score++;
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-      gameScore.innerHTML = `${score} of 5`;
+      gameScore.innerHTML = `${score} of ${questionnum}`;
       finishGame();
     } else if (
       categoryQuestions.length === 0 &&
@@ -132,7 +137,7 @@ options.forEach((item) => {
       colour = "red";
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-      gameScore.innerHTML = `${score} of 5`;
+      gameScore.innerHTML = `${score} of ${questionnum}`;
       finishGame();
     } else if (selectedChoice === correctAnswer) {
       resulticon = "check";
@@ -142,7 +147,7 @@ options.forEach((item) => {
       score++;
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-      gameScore.innerHTML = `${score} of 5`;
+      gameScore.innerHTML = `${score} of ${questionnum}`;
       getNewQuestion();
     } else {
       resulticon = "x";

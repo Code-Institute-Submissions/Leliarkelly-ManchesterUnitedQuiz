@@ -62,7 +62,7 @@
     "optionc": "Jack Rowley",
     "optiond": "Sir Bob Charlton",
     "correctanswer": "Sir Bob Charlton",
-    "answer": "d" 
+    "answer": "d"
   },
   {
     "question": "Which team did United beat to win the 1968 European Cup final?",
@@ -147,7 +147,6 @@
     "optiond": "Munich",
     "correctanswer": "Moscow",
     "answer": "c"
-    
   },
 
   {
@@ -159,5 +158,16 @@
     "optiond": "2012-13",
     "correctanswer": "2012-13",
     "answer": "d"
+  },
+  {
+    "question": "Which shite team knocked Manchester United out of FA cup in 2022.  8-7 on penalties?",
+    "category": "Team",
+    "optiona": "Watford",
+    "optionb": "Burnley",
+    "optionc": "Arsenal",
+    "optiond": "Middlesborough",
+    "correctanswer": "Middlesborough",
+    "answer": "d",
+    "image": "ManchesterUnitedFAcup.jpg"
   }
 ]
