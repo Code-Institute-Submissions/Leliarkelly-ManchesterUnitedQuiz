@@ -1,5 +1,3 @@
-
-// section1a - Category Container - display on page load and hidden when selected
 const categoryContainer = document.getElementById("category-section");
 // section1a - Category Container - quiz categories
 const playerCategory = document.getElementById("players");
@@ -39,16 +37,18 @@ const progress = document.querySelector("#progress-bar");
 
 //variables
 
-let questionCounter = 0;  // question number
-let score = 0;  //correct answers
+let questionCounter = 0; // question number
+let score = 0; //correct answers
 let questions = []; // store of all questions from JSON files
-let categoryQuestions = [];  // Array of questions by category selected
-let completedQuestions = [];  // store for questions that have been completed during quiz
-let questionnum = 0;  // total number of questions per category
+let categoryQuestions = []; // Array of questions by category selected
+let completedQuestions = []; // store for questions that have been completed during quiz
+let questionnum = 0; // total number of questions per category
 let currentQuestion;
 let positionResult;
+let resulticon;
+let colour;
 
-//The getData function fetches question date from quiz.json and takes as parameter, 
+//The getData function fetches question date from quiz.json and takes as parameter,
 // the category selected and pushes those questions to the completed question array
 function getData(input) {
   fetch("quiz.json")
@@ -70,10 +70,23 @@ function getData(input) {
     .catch((err) => console.log(err));
 }
 
+//this function will check if there is an image in the JSON and add to DOM if true.
 
+function checkImage() {
+  if(imageOutput = 'image' in currentQuestion){
+  document.body.style.backgroundImage = 'none';
+          imageURL = currentQuestion.image;
+          console.log(imageURL);
+          image.style.display = "block";
+          image.style.backgroundImage = `url(${imageURL})`;
+                  }
+  }
+            
 function getNewQuestion() {
   questionCounter++;
   questionContainer.style.display = "block";
+  image.style.display = "none";
+  document.body.style.backgroundImage = "url('ManchesterUnitedHomePage4.jpg')";
   const questionIndex = Math.floor(Math.random() * categoryQuestions.length);
   currentQuestion = categoryQuestions[questionIndex];
   question.innerHTML = `Question ${questionCounter}: ${currentQuestion.question}`;
@@ -81,7 +94,7 @@ function getNewQuestion() {
   optionB.innerText = currentQuestion.optionb;
   optionC.innerText = currentQuestion.optionc;
   optionD.innerText = currentQuestion.optiond;
-  image.innerHTML = currentQuestion.image;
+  checkImage();
   const completedQuestion = categoryQuestions.splice(questionIndex, 1);
   console.log(completedQuestion);
   completedQuestions.push(...completedQuestion);
@@ -95,10 +108,9 @@ options.forEach((item) => {
     const youranswer = e.target.innerText;
     const answertext = currentQuestion.correctanswer;
     const correctAnswer = currentQuestion.answer;
-    let resulticon;
-    let colour;
     if (categoryQuestions.length === 0 && selectedChoice === correctAnswer) {
-      resulticon = "check", colour = "#007400";
+      resulticon = "check";
+      colour = "#007400";
       console.log(questionCounter);
       console.log(questionnum);
       score++;
@@ -106,39 +118,42 @@ options.forEach((item) => {
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       gameScore.innerHTML = `${score} of 5`;
       finishGame();
-    }
-    else if (categoryQuestions.length === 0 && selectedChoice != correctAnswer){
-      resulticon = "x", colour = "red";
+    } else if (
+      categoryQuestions.length === 0 &&
+      selectedChoice != correctAnswer
+    ) {
+      resulticon = "x";
+      colour = "red";
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       gameScore.innerHTML = `${score} of 5`;
       finishGame();
-    }
-    else if (selectedChoice === correctAnswer) {
-      resulticon = "check", colour = "#007400";
+    } else if (selectedChoice === correctAnswer) {
+      resulticon = "check";
+      colour = "#007400";
       console.log(questionCounter);
       console.log(questionnum);
       score++;
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-      gameScore.innerHTML = `${score} of 5`;      
+      gameScore.innerHTML = `${score} of 5`;
       getNewQuestion();
-        } 
-    else {
-      resulticon = "x", colour = "red";
+    } else {
+      resulticon = "x";
+      colour = "red";
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       gameScore.innerHTML = `${score} of 5`;
       getNewQuestion();
     }
     console.log(resulticon);
-    console.log(colour);    
+    console.log(colour);
     const compquestion = `
     <li>${question} 
     <p> The correct answer is ${answertext}</p> 
     <p> Your answer was ${youranswer} &emsp; <i class="bi bi-${resulticon}-circle" style="color: ${colour};"></i></p>
       </li> `;
-    yourAnswers.innerHTML += compquestion;  
+    yourAnswers.innerHTML += compquestion;
   });
 });
 
@@ -158,10 +173,6 @@ function showResults() {
     yourAnswersContainer.style.display = "none";
   }
 }
-
-
-
-
 
 playerCategory.addEventListener("click", () => getData("Player"));
 teamCategory.addEventListener("click", () => getData("Team"));

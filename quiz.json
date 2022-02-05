@@ -18,7 +18,8 @@
     "optionc": "2017",
     "optiond": "2018",
     "correctanswer": "2016",
-    "answer": "b"
+    "answer": "b",
+    "image": "Marcus Rashford.jpeg"
   },
   {
     "question": "Which player has made the most appearances for United?",
@@ -39,7 +40,8 @@
     "optionc": "20",
     "optiond": "23",
     "correctanswer": "20",
-    "answer": "c"
+    "answer": "c",
+    "image": "league_titles.jpeg"
   },
 
   {
@@ -54,13 +56,13 @@
   },
   {
     "question": "Who did Wayne Rooney surpass to become Man Utd’s all-time top scorer?",
-    "category": "Player2",
+    "category": "Player",
     "optiona": "Denis Law",
     "optionb": "George Best",
     "optionc": "Jack Rowley",
     "optiond": "Sir Bob Charlton",
     "correctanswer": "Sir Bob Charlton",
-    "answer": "d"
+    "answer": "d" 
   },
   {
     "question": "Which team did United beat to win the 1968 European Cup final?",
@@ -131,7 +133,8 @@
     "optionc": "Stretford Ender",
     "optiond": "Red Devil",
     "correctanswer": "Fred the Red",
-    "answer": "a"
+    "answer": "a",
+    "image": "Fred_the_red.jpeg"
   },
 
   {

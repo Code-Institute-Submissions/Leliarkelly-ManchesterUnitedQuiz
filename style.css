@@ -7,7 +7,7 @@
 
 body {
   background: url("ManchesterUnitedHomePage4.jpg") no-repeat center fixed;
-  background-color: #fff;
+  background-color: #010f1c;
   background-size: cover;
   display: flex;
   font-family: "Bebas Neue", cursive;
@@ -44,16 +44,15 @@ h2 {
 .quiz-container {
   background-color: transparent;
   border-radius: 5px;
-  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
-  width: 400px;
+   width: 400px;
   margin: 0px auto;
   overflow: hidden;
   /* background-color: aquamarine; */
 }
 
 /* 1a Category container */
-.category-container {
-  /* background-color: aqua; */
+  .category-container {
+  
   display: block;
 }
 
@@ -69,6 +68,7 @@ h2 {
   transition: all 300ms ease-in-out;
   font-family: SourceSansProSemiBold, Helvetica, sans-serif;
   line-height: 50px;
+  margin-top: 10px;
   padding: 0 32px;
   text-align: center;
   cursor: pointer;
@@ -77,7 +77,6 @@ h2 {
 /* 1b Question container */
 
 .question-container {
-  /* background-color: blue; */
   display: none;
   padding: 10px;
   margin-top: 0px;
@@ -85,16 +84,16 @@ h2 {
 }
 
 div.image {
+  max-width: 100%;
   display: none;
-  width: 400px; /*width of your image*/
-  height: 200px; /*width of your image*/
-  background-image: url('David_Beckham_Free_Kick.jpeg');
-  margin:0; /* If you want no margin */
-  padding:0; /*if your want to padding */
+  width: 300px; 
+  height: 150px;
+  margin: 0 auto;
+  padding:0; 
+  background-repeat: no-repeat;  
 }
 
 .progress {
-  /* background-color: cadetblue; */
   width: 100%;
   max-width: 600px;
   margin: 10px auto 0;
@@ -102,28 +101,23 @@ div.image {
   position: relative;
   text-align: center;
 }
-
 #progress-bar {
-  /* background-color: crimson; */
   position: absolute;
   background: #c70101;
   height: 10px;
   transition: width 0.5s ease-in-out;
 }
-
 .question-text {
   color: #fff;
   font-family: BebasNeueBold, Helvetica, sans-serif;
   text-align: center;
   width: 100%;
-  /* margin-bottom: 29px; */
   font-size: 22px;
   line-height: 24px;
 }
 
 .answers {
   padding-top: 10px;
-  /* background-color: yellow; */
 }
 
 .answers li {
@@ -156,7 +150,6 @@ div.image {
 /* <!-- 1c Results Container --> */
 
 .results-container {
-  /* background-color: crimson; */
   padding: 10px;
   margin: 20px;
   display: none;
@@ -221,19 +214,14 @@ div.image {
 
 /* <!-- 1d Your Results Container --> */
 .your-results-container {
-  /* background-color: purple; */
   padding: 10px;
   margin: 20px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-content: center; */
   display: none;
   text-align: center;
 }
 .show-results {
   margin-top: 20px;
   background-color: transparent;
-  /* text-align: center;   */
   cursor:pointer
 
 }
@@ -249,17 +237,13 @@ button {
   align-self: center;
 }
 
-
-
 /* 1e Your answers container */
 
 .your-answers-container{
-  /* background-color: #c70101; */
   display: flex;
   flex-direction: column;
   align-content: center;  
-  display:none;
-  
+  display:none;  
 }
 
 
@@ -275,10 +259,8 @@ button {
 #your-answers li{
   padding-left: 5px;
   font-family: "Bebas Neue", cursive;
-
   border: 1px solid grey;   
   border-radius: 5px; 
   color: #c70101;
   background-color: gainsboro;
-  
  }
