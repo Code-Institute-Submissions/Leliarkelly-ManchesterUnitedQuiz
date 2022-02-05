@@ -78,7 +78,7 @@ function checkImage() {
           imageURL = currentQuestion.image;
           console.log(imageURL);
           image.style.display = "block";
-          image.style.backgroundImage = `url(${imageURL})`;
+          image.style.backgroundImage = `url(images/${imageURL})`;
                   }
   }
             

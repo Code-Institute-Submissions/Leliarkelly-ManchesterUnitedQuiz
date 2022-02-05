@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url("ManchesterUnitedHomePage4.jpg") no-repeat center fixed;
+  background: url("images/ManchesterUnitedHomePage4.jpg") no-repeat center fixed;
   background-color: #010f1c;
   background-size: cover;
   display: flex;
@@ -253,13 +253,13 @@ button {
   color: #fff;
   font-style: normal;
   text-align: left;
-  border-radius: 5px;
+  
 }
 
 #your-answers li{
   padding-left: 5px;
   font-family: "Bebas Neue", cursive;
-  border: 1px solid grey;   
+  border: 1px 1px solid grey;   
   border-radius: 5px; 
   color: #c70101;
   background-color: gainsboro;
