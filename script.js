@@ -66,6 +66,7 @@ function getData(input) {
       console.log(categoryQuestions);
       getNewQuestion();
       categoryContainer.style.display = "none";
+      // categoryContainer.style.marginTop = "none";
     })
     .catch((err) => console.log(err));
 }

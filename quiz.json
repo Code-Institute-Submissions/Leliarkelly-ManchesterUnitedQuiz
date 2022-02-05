@@ -12,7 +12,7 @@
   },
   {
     "question": "Marcus Rashford open his goal scoring account in which year",
-    "category": "Player1",
+    "category": "Player",
     "optiona": "2015",
     "optionb": "2016",
     "optionc": "2017",
@@ -23,7 +23,7 @@
   },
   {
     "question": "Which player has made the most appearances for United?",
-    "category": "Player1",
+    "category": "Player",
     "optiona": "Ryan Giggs",
     "optionb": "Sir Bobby Charlton",
     "optionc": "Gary Neville",
@@ -93,7 +93,8 @@
     "optiond": "£14 million",
     "correctanswer": "£12 million",
     "category": "Player",
-    "answer": "c"
+    "answer": "c",
+    "image": "Christiano_Ronaldo.jpeg"
   },
   {
     "question": "Who scored United’s winning goal vs Liverpool in the 1996 FA Cup final?",
