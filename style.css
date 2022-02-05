@@ -85,6 +85,7 @@ h2 {
 }
 
 div.image {
+  display: none;
   width: 400px; /*width of your image*/
   height: 200px; /*width of your image*/
   background-image: url('David_Beckham_Free_Kick.jpeg');

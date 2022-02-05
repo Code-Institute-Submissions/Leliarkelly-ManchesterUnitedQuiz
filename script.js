@@ -1,27 +1,34 @@
-// section1a - Category Container - display on page load
-const categoryContainer = document.getElementById("category-section");
-// section 1b Question Container --> - display after category is selected
-const questionContainer = document.getElementById("question-section");
-// <!-- 1c Results Container -- diaplsyed after 5 questions completed
-const resultsContainer = document.getElementById("results-section");
-// <!-- 1d Your Results Container -- displayed after 5 questions completed
-const yourResultsContainer = document.getElementById("your-results-section");
-// <!-- 1e Your Answers Container --> displayed if show result button selected
-const yourAnswersContainer = document.getElementById("your-answers-section");
-// Show answers - Display given answers on click 
-const showAnswers = document.getElementById("show-results");
-// populates answers into DOM
-const yourAnswers = document.getElementById("your-answers");
-const question = document.getElementById("question");
-const answers = document.getElementById("your-results-detail");
-const finalScore = document.getElementById("final-score");
-const gradientCircle = document.querySelector(".gradient-circle");
-console.log(showAnswers);
 
+// section1a - Category Container - display on page load and hidden when selected
+const categoryContainer = document.getElementById("category-section");
+// section1a - Category Container - quiz categories
 const playerCategory = document.getElementById("players");
 const teamCategory = document.getElementById("team");
 const competitionCategory = document.getElementById("competitions");
+// section 1b Question Container --> - display after category is selected
+const questionContainer = document.getElementById("question-section");
+// <!-- 1c Results Container -- displays after 5 questions completed
+const resultsContainer = document.getElementById("results-section");
+// <!-- 1d Your Results Container -- displays after 5 questions completed
+const yourResultsContainer = document.getElementById("your-results-section");
+// <!-- 1e Your Answers Container --> displayed if show result button selected
+const yourAnswersContainer = document.getElementById("your-answers-section");
+// placeholder for populated answers after each question is answered
+const yourAnswers = document.getElementById("your-answers");
+// Show answers - Display given answers on click show result icon
+const showAnswers = document.getElementById("show-results");
+// placeholder for questions
+const question = document.getElementById("question");
+
+// placeholder for game score during game
 const gameScore = document.getElementById("your-score");
+// placeholder for final score on final page
+const finalScore = document.getElementById("final-score");
+// used to update graphic based on final score
+const gradientCircle = document.querySelector(".gradient-circle");
+console.log(showAnswers);
+
+//used to populate question, answers, progress and images
 const optionA = document.getElementById("a-option");
 const optionB = document.getElementById("b-option");
 const optionC = document.getElementById("c-option");
@@ -29,17 +36,20 @@ const optionD = document.getElementById("d-option");
 const image = document.getElementById("image");
 const options = Array.from(document.getElementsByClassName("answer"));
 const progress = document.querySelector("#progress-bar");
-const finalscore = document.getElementById("your-score");
+
+//variables
 
 let questionCounter = 0;  // question number
 let score = 0;  //correct answers
 let questions = []; // store of all questions from JSON files
-let categoryQuestions = [];  // Array of category by question
-let completedQuestions = [];  // store for questions that have been completed
-let questionnum = 0;  // total number of questions fetch per category
+let categoryQuestions = [];  // Array of questions by category selected
+let completedQuestions = [];  // store for questions that have been completed during quiz
+let questionnum = 0;  // total number of questions per category
 let currentQuestion;
 let positionResult;
 
+//The getData function fetches question date from quiz.json and takes as parameter, 
+// the category selected and pushes those questions to the completed question array
 function getData(input) {
   fetch("quiz.json")
     .then((res) => res.json())
@@ -59,6 +69,7 @@ function getData(input) {
     })
     .catch((err) => console.log(err));
 }
+
 
 function getNewQuestion() {
   questionCounter++;
