@@ -44,7 +44,7 @@ h2 {
 .quiz-container {
   background-color: transparent;
   border-radius: 5px;
-   width: 400px;
+  width: 300px;
   margin: 0px auto;
   overflow: hidden;
   /* background-color: aquamarine; */
@@ -95,7 +95,7 @@ div.image {
 
 .progress {
   width: 100%;
-  max-width: 600px;
+  max-width: 300px;
   margin: 10px auto 0;
   display: block;
   position: relative;
