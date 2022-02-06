@@ -21,7 +21,7 @@ const showAnswers = document.getElementById("show-results");
 const question = document.getElementById("question");
 
 // placeholder for game score during game
-const gameScore = document.getElementById("your-score");
+const gameProgress= document.getElementById("your-progress");
 // placeholder for final score on final page
 const finalScore = document.getElementById("final-score");
 // used to update graphic based on final score
@@ -90,7 +90,9 @@ function checkImage() {
 }
 
 function getNewQuestion() {
-  gameScore.innerHTML = `${score} of ${questionnum}`;
+  document.body.scrollTop = 0; // For Safari to move back to top of screen
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera to move back to top of screen
+  gameProgress.innerHTML = `${questionCounter} of ${questionnum}`;
   questionCounter++;
   questionContainer.style.display = "block";
   image.style.display = "none";
@@ -127,7 +129,7 @@ options.forEach((item) => {
       score++;
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-      gameScore.innerHTML = `${score} of ${questionnum}`;
+      // gameProgress.innerHTML = `${score} of ${questionnum}`;
       finishGame();
     } else if (
       categoryQuestions.length === 0 &&
@@ -137,7 +139,7 @@ options.forEach((item) => {
       colour = "red";
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-      gameScore.innerHTML = `${score} of ${questionnum}`;
+      // gameScore.innerHTML = `${score} of ${questionnum}`;
       finishGame();
     } else if (selectedChoice === correctAnswer) {
       resulticon = "check";
@@ -147,14 +149,14 @@ options.forEach((item) => {
       score++;
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-      gameScore.innerHTML = `${score} of ${questionnum}`;
+      // gameScore.innerHTML = `${score} of ${questionnum}`;
       getNewQuestion();
     } else {
       resulticon = "x";
       colour = "red";
       positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-      gameScore.innerHTML = `${score} of 5`;
+      // gameScore.innerHTML = `${score} of 5`;
       getNewQuestion();
     }
     console.log(resulticon);
