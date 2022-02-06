@@ -56,6 +56,12 @@ h2 {
   display: block;
 }
 
+h3 {
+  margin-top: -60px;
+  color: #c70101;
+  text-align: center;
+}
+
 .category-container li {
   width: 100%;
   letter-spacing: 2px;
@@ -112,22 +118,23 @@ div.image {
   font-family: BebasNeueBold, Helvetica, sans-serif;
   text-align: center;
   width: 100%;
-  font-size: 22px;
-  line-height: 24px;
+  font-size: 16px;
+  /* line-height: 24px; */
 }
 
 .answers {
+  margin-top: -10px;
   padding-top: 10px;
 }
 
 .answers li {
-  margin: 10px, 10px;
+  /* margin: 10px, 10px; */
   text-align: center;
   width: 100%;
   margin-bottom: 25px;
   font-family: SourceSansProRegular, Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 24px;
+  /* line-height: 24px; */
   letter-spacing: 2px;
   border-radius: 10px;
   font-weight: 500;
