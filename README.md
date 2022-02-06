@@ -16,21 +16,13 @@ The flowchart below depict the logic underpinning the javascript code.
 
 https://lucid.app/documents/view/23cd3b4c-e44a-4622-b63f-780f841fbac3
 
-
 <h2>Quiz Section</h2>
 
 1. Category section display the category of questions available:
 
-
-
-
-2. Question section display each question, progress bar, score and available answers.  From some question an image is included.
-
-
-
+2. Question section display each question, progress bar, score and available answers. From some question an image is included.
 
 3. Result section provide summary of the results and ability to display answers
-
 
 <h2>Project Goals</h2>
 
@@ -38,7 +30,6 @@ https://lucid.app/documents/view/23cd3b4c-e44a-4622-b63f-780f841fbac3
 <p> Provide some visuals with the use of images and colour to contribute to a positive user experience.</p>
 <p> Track progress and provide user with feedback on quiz</p>
 <p> Be scalable where new questions and images can be added to the JSON file without updating the underlying code </p>
-
 
 <h2>User Stories</h2>
 
@@ -56,10 +47,10 @@ Easily add new questions to the questions list without updaing the code.
 
 <h2>Testing</h2>
 
-During development i continuously user tested.  I extensively used console.log to understand what my code at each line code and correct.
-I recruited some testers to test my application as a user to text each possible scenario 
+During development i continuously user tested. I extensively used console.log to understand what my code at each line code and correct.
+I recruited some testers to test my application as a user to text each possible scenario
 
-I carried out unit testing 
+I carried out unit testing
 
 I carried out testing on different devices.
 
@@ -67,14 +58,10 @@ I code checked on JSHINT which returned no errors
 
 <h2>Wireframes</h2>
 
-![My Wireframes](../images/Fred_the_red);
-
+![My Wireframes](../images/Manchester_United_Quiz_Wireframe.png);
 
 <h2>Acknowledgments</h2>
 
-1) Ideas and design and colour of application came from Manchester United Official website
-2) Structure of game and coding ideas came from "How to Build a quiz App" from James Quick, Developer and Teacher.
-3) I also used tips provided by Brad Travesy, Online teacher.
-
-
-
+1. Ideas and design and colour of application came from Manchester United Official website
+2. Structure of game and coding ideas came from "How to Build a quiz App" from James Quick, Developer and Teacher.
+3. I also used tips provided by Brad Travesy, Online teacher.
