@@ -1,3 +1,5 @@
+README Page IN DEVELOPMENT
+
 <h1>Manchester Quiz Application</h1>
 <h2>Introduction</h2>
 
@@ -58,7 +60,7 @@ I code checked on JSHINT which returned no errors
 
 <h2>Wireframes</h2>
 
-![My Wireframes](../images/Manchester_United_Quiz_Wireframe.png);
+![My Wireframes](../images/Manchester_United_Quiz_Wireframes.jpeg);
 
 <h2>Acknowledgments</h2>
 
