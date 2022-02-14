@@ -5,16 +5,16 @@ README Page IN DEVELOPMENT
 
 <a>Link to the main site</a>
 
-<p>Manchester Quix App is a mutliple choice application which test the user knowledge of Manchester United and providing the following user functionality
+<p>Manchester Quix App is a mutliple choice application which test the user knowledge of Manchester United providing the following user functionality
 
-- The application will ask the user randomly ordered questions based on the category chosen and number of questions in the JSON file of that category.
-- The user select each question and score will increment by 1 if they answer correctly.
-- A progress bar shows the user how many question they have remaining
-- At the end of the game a circular graphic diplayw their final score and option to play the quiz again.
-- The application finally provides a summary of the answers provided against the correct answer.
+- The application will ask the user randomly ordered questions based on the category chosen by the user
+- The user answers each question and their score will increment by 1 if they answer correctly.
+- A progress bar will shows the user how many question they have remaining
+- At the end of the game a circular graphic will diplay their final score and provide an option to play the quiz again.
+- The application finally provides a summary of the answers gave for the user to compare against the correct answer.
 
 <h2>Flowchart</h2>
-The flowchart below depict the logic underpinning the javascript code.
+The flowchart below depict the logic underpinning the javascript code that I developed.
 
 https://lucid.app/documents/view/23cd3b4c-e44a-4622-b63f-780f841fbac3
 
@@ -38,25 +38,21 @@ https://lucid.app/documents/view/23cd3b4c-e44a-4622-b63f-780f841fbac3
 As a user I want:
 
 To play a fun and easy to use quiz.
-Clear instructions on how to use the quiz.
 To test my knowledge of Manchester United .
-To see my total score and compare to the correct answers
+To get my total score and compare to the correct answers
 To be able to easily repeat the quiz if I want to try again.
 
 As a developer I want:
 
-Easily add new questions to the questions list without updaing the code.
+Easily add new questions and images to the questions array without updating the undelying code.
 
 <h2>Testing</h2>
 
-During development i continuously user tested. I extensively used console.log to understand what my code at each line code and correct.
-I recruited some testers to test my application as a user to text each possible scenario
-
-I carried out unit testing
-
+During development I continuously user tested. I extensively used console.log to help me understand what my code was doing.
+I recruited some testers to test my application on different application
 I carried out testing on different devices.
-
-I code checked on JSHINT which returned no errors
+I code checked on JSHINT which returned no errors.
+I validated the markup and css code using: W3C Validator and Jigsaw Validator and return no errors
 
 <h2>Wireframes</h2>
 
@@ -67,3 +63,4 @@ I code checked on JSHINT which returned no errors
 1. Ideas and design and colour of application came from Manchester United Official website
 2. Structure of game and coding ideas came from "How to Build a quiz App" from James Quick, Developer and Teacher.
 3. I also used tips provided by Brad Travesy, Online teacher.
+4. My Mentor at the Code instistute gave much needed support, tips and encouragement throughout the development process
