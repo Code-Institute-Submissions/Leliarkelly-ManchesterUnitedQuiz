@@ -12,7 +12,7 @@
   },
   {
     "question": "Marcus Rashford open his goal scoring account in which year",
-    "category": "Player1",
+    "category": "Player",
     "optiona": "2015",
     "optionb": "2016",
     "optionc": "2017",
@@ -23,7 +23,7 @@
   },
   {
     "question": "Which player has made the most appearances for United?",
-    "category": "Player1",
+    "category": "Player",
     "optiona": "Ryan Giggs",
     "optionb": "Sir Bobby Charlton",
     "optionc": "Gary Neville",
@@ -56,7 +56,7 @@
   },
   {
     "question": "Who did Wayne surpass to become Man Utd’s all-time top scorer?",
-    "category": "Player1",
+    "category": "Player",
     "optiona": "Denis Law",
     "optionb": "George Best",
     "optionc": "Jack Rowley",

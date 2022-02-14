@@ -60,7 +60,7 @@ I validated the markup and css code using: W3C Validator and Jigsaw Validator an
 
 <h2>Acknowledgments</h2>
 
-1. Ideas and design and colour of application came from Manchester United Official website
-2. Structure of game and coding ideas came from "How to Build a quiz App" from James Quick, Developer and Teacher.
-3. I also used tips provided by Brad Travesy, Online teacher.
-4. My Mentor at the Code instistute gave much needed support, tips and encouragement throughout the development process
+1. Ideas and design of quiz application came from Manchester United Official website
+2. Structure of game and initial coding ideas came from "How to Build a quiz App" from James Quick, Developer and Teacher.
+3. I also used tips provided by Brad Travesy, Online teacher at Udemy
+4. My Mentor at the Code instistute gave much needed support, tips and encouragement throughout the development process so thank you to Spencer 
