@@ -42,14 +42,13 @@ THe quiz has 3 parts:  Category section, question section and result section
 
 <h2>Wireframes</h2>
 
-<p>The wireframes depicts the design for the 3 parts of the application</p>:  
-<li>Home screen: category selection</li>
-<li>Quiz screen: random question are displayed and progress can be tracked</li>
-<li>Result screen: display results of quiz with chartJS graphic with the option to play again </li>
+<p>The wireframes depicts the design for the 3 parts of the application</p>
 
+<li>Home screen: display the category available: Players, Team and Competition</li>
+<li>Quiz screen: presents random questions to the user and progress can be tracked</li>
+<li>Result screen: display results of quiz with an automated graphic with the option to play again </li>
 
 <center><img src = "images/Manchester_United_Quiz_Wireframes.jpeg" height = "400" width = "800" style='border:1px solid #000000'><img></center>
-
 
 <h2>Flowchart</h2>
 

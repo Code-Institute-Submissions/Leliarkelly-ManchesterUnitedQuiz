@@ -76,7 +76,7 @@ function getData(input) {
       getNewQuestion();
       categoryContainer.style.display = "none";
       document.body.style.backgroundImage = "none";
-      
+
     })
     .catch((err) => console.log(err));
 }
@@ -134,7 +134,7 @@ choices.forEach((item) => {
     ) {
       resulticon = "x";
       colour = "#c70101";
-      textFeedback = "Wrong Answer!";
+      textFeedback = "Incorrect!";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       finishGame();
     } else if (selectedChoice === correctAnswer) {
@@ -147,14 +147,14 @@ choices.forEach((item) => {
     } else {
       resulticon = "x";
       colour = "red";
-      textFeedback = "Wrong Answer!";
+      textFeedback = "Incorrect!";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       getNewQuestion();
     }
     const compquestion = `  
     <li style ="background-color: ${colour}"><p>${question}</p> 
     <p> The correct answer is ${answertext}</p> 
-    <p> ${textFeedback} Your answer was ${youranswer} &emsp; <i class="bi bi-${resulticon}-circle"></i></p>
+    <p> Your answer was ${youranswer}. ${textFeedback} &emsp; <i class="bi bi-${resulticon}-circle"></i></p>
       </li> `;
     yourAnswers.innerHTML += compquestion;
   });
