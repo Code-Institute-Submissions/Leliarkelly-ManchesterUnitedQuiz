@@ -11,8 +11,7 @@ const questionContainer = document.getElementById("question-section");
 const resultsContainer = document.getElementById("results-section");
 // <!-- 1d Your Results Container -- displays after 5 questions completed
 const yourResultsContainer = document.getElementById("your-results-section");
-// <!-- 1e Your Answers Container --> displayed if show result button selected
-const yourAnswersContainer = document.getElementById("your-answers-section");
+
 // placeholder for populated answers after each question is answered
 const yourAnswers = document.getElementById("your-answers");
 // Show answers - Display given answers on click show result icon
@@ -200,10 +199,11 @@ function finishGame() {
 
 // this function hides and display the results
 function showResults() {
-  if (yourAnswersContainer.style.display === "none") {
-    yourAnswersContainer.style.display = "block";
-  } else {
+  let yourAnswersContainer = document.getElementById("your-answers-section");
+  if (yourAnswersContainer.style.display === "block") {
     yourAnswersContainer.style.display = "none";
+  } else {
+    yourAnswersContainer.style.display = "block";
   }
 }
 
