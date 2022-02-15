@@ -107,14 +107,14 @@
     "answer": "d"
   },
   {
-    "question": "Who scored Man Utd’s two goals in the 1999 Champions League final?",
-    "optiona": "Beckham and Solskjaer",
-    "optionb": "Giggs and Sheringham",
-    "optionc": "Yorke and Cole",
-    "optiond": "Solshjaer and Sheringham",
-    "category": "Competition",
+    "question": "What is United’s record victory in the Champions League?",
+    "optiona": "7-0",
+    "optionb": "7-1",
+    "optionc": "8-0",
+    "optiond": "8-1",
+    "category": "7-1",
     "correctanswer": "Solshjaer and Sheringham",
-    "answer": "d"
+    "answer": "b"
   },
   {
     "category": "Team",
@@ -122,7 +122,7 @@
     "optiona": "Ipswich Town and Southampton",
     "optionb": "Ipswich Town and Nottingham Forest",
     "optionc": "Blackburn Rovers and Nottingham Forest",
-    "optiond": "Debry County and Southampton",
+    "optiond": "Derby County and Southampton",
     "correctanswer": "Ipswich Town and Southampton",
     "answer": "a"
   },
@@ -160,7 +160,7 @@
     "answer": "d"
   },
   {
-    "question": "Which shite team knocked Manchester United out of FA cup in 2022.  8-7 on penalties?",
+    "question": "Which team knocked Manchester United out of FA cup in 2022.  8-7 on penalties?",
     "category": "Team",
     "optiona": "Watford",
     "optionb": "Burnley",
