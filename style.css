@@ -237,9 +237,14 @@ button {
 #your-answers li {
   padding-left: 5px;
   font-family: "Bebas Neue", cursive;
-  color: #c70101;
+  color: #010f1c;
   background-color: gainsboro;
-  font-size: 12px;
+  font-size: 14px;
  }
 
+ #your-answers i{
+   font-weight: 800;
+   
+
+ }
 

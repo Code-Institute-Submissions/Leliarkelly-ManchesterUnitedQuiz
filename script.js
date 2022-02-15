@@ -20,12 +20,10 @@ const showAnswers = document.getElementById("show-results");
 // placeholder for questions
 const question = document.getElementById("question");
 // placeholder for game score during game
-const gameProgress= document.getElementById("your-progress");
+const gameProgress = document.getElementById("your-progress");
 // placeholder for final score on final page
 // const finalScore = document.getElementById("final-score");
 const graphicScore = document.getElementById("scoreJS");
-// used to update graphic based on final score
-// const gradientCircle = document.querySelector(".gradient-circle");
 
 //used to populate question, answers, progress and images
 const optionA = document.getElementById("a-option");
@@ -44,21 +42,23 @@ let questions = []; // store of all questions from JSON files
 let categoryQuestions = []; // Array of questions by category selected
 let completedQuestions = []; // store for questions that have been completed during quiz
 let questionnum = 0; // total number of questions per category
-let currentQuestion;
-let positionResult;
-let resulticon;
-let colour;
-let imageURL;
+let currentQuestion; // currentQUestion being asnwered
+let resulticon; //icon to display depending on whether right or wrong - cross for wrong and check for correct
+let colour; //background colour to display - red for wrong and green for correct
+let textFeedback; //feedback text :  Well done or Wrong answer
+let imageURL; // image url variable for questions
 let backgroundImage = [
   "ManchesterUnitedHomePage1.jpg",
   "ManchesterUnitedHomePage2.jpg",
   "ManchesterUnitedHomePage3.jpg",
   "ManchesterUnitedHomePage4.jpg",
 ];
+// array of background images for home page
 
 //randomise background image on home page
-let randomItem = backgroundImage[Math.floor(Math.random()*backgroundImage.length)];
-document.body.style.backgroundImage = `url(images/${randomItem})`;  
+let randomItem =
+  backgroundImage[Math.floor(Math.random() * backgroundImage.length)];
+  document.body.style.backgroundImage = `url(images/${randomItem})`;
 
 //The getData function fetches question data from quiz.json and takes as parameter,
 // the category selected and pushes those questions to the completed question array
@@ -92,11 +92,11 @@ function checkImage() {
   }
 }
 
-//this function will display the new Question and possible answers into the DOM 
+//this function will display the new Question and possible answers into the DOM
 function getNewQuestion() {
   document.body.scrollTop = 0; // For Safari to move back to top of screen
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera to move back to top of screen
-  questionCounter++; 
+  questionCounter++;
   gameProgress.innerHTML = `${questionCounter} of ${questionnum}`;
   questionContainer.style.display = "block";
   image.style.display = "none";
@@ -111,7 +111,7 @@ function getNewQuestion() {
   const completedQuestion = categoryQuestions.splice(questionIndex, 1);
   completedQuestions.push(...completedQuestion);
 }
-//this function will listen for a click and check and store answers into completedquest variable
+//this function will listen for a click and check and store answers into completedQuestion variable
 choices.forEach((item) => {
   item.addEventListener("click", (e) => {
     const selectid = e.target.id;
@@ -122,42 +122,45 @@ choices.forEach((item) => {
     const correctAnswer = currentQuestion.answer;
     if (categoryQuestions.length === 0 && selectedChoice === correctAnswer) {
       resulticon = "check";
-      colour = "#007400";
+      colour = "#228C22";
+      textFeedback = "Well Done!";
       score++;
-      positionResult = (questionCounter * 100) / questionnum + "%";
+      // positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-        finishGame();
+      finishGame();
     } else if (
       categoryQuestions.length === 0 &&
       selectedChoice != correctAnswer
     ) {
       resulticon = "x";
-      colour = "red";
-      positionResult = (questionCounter * 100) / questionnum + "%";
+      colour = "#c70101";
+      textFeedback = "Wrong Answer!";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
-        finishGame();
+      finishGame();
     } else if (selectedChoice === correctAnswer) {
       resulticon = "check";
       colour = "#228C22";
+      textFeedback = "Well Done!";
       score++;
-      positionResult = (questionCounter * 100) / questionnum + "%";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       getNewQuestion();
     } else {
       resulticon = "x";
       colour = "red";
-      positionResult = (questionCounter * 100) / questionnum + "%";
+      textFeedback = "Wrong Answer!";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       getNewQuestion();
     }
-    const compquestion = `
-    <li><p>${question}</p> 
+    const compquestion = `  
+    <li style ="background-color: ${colour}"><p>${question}</p> 
     <p> The correct answer is ${answertext}</p> 
-    <p> Your answer was ${youranswer} &emsp; <i class="bi bi-${resulticon}-circle" style="color: ${colour};"></i></p>
+    <p> ${textFeedback} Your answer was ${youranswer} &emsp; <i class="bi bi-${resulticon}-circle"></i></p>
       </li> `;
     yourAnswers.innerHTML += compquestion;
   });
 });
+
+// style="color: ${colour};"
 
 // this function is called when all the questions have been completed.  It hides questions container, and display the result containers
 
@@ -167,40 +170,41 @@ function finishGame() {
   yourResultsContainer.style.display = "block";
   const winningScore = (score / questionnum) * 100;
   const losingScore = 100 - winningScore;
-//this part of the function adds an animated Chart.js which display the results
-  let ctx = document.getElementById("doughnut-chartcanvas");
-  let myChart = new Chart(ctx, {
-    type: 'doughnut',
+  //this part of the function adds an animated Chart.js which display the results
+  let ctx = document.getElementById("myChart");
+  const myChart = new Chart(ctx, {
+    type: "doughnut",
     data: {
-    datasets: [{
-      data: [0, winningScore, losingScore],
-      backgroundColor: [
-        'rgba(255,255,255)',
-        'rgba(199,1,1)',
-        'rgba(255,255,255)',
-        ],      
-    }]
-  },
+      datasets: [
+        {
+          data: [0, winningScore, losingScore],
+          backgroundColor: [
+            "rgba(255,255,255)",
+            "rgba(199,1,1)",
+            "rgba(255,255,255)",
+          ],
+        },
+      ],
+    },
 
-  options: {
-    cutout: 90,
-    animation: {
+    options: {
+      cutout: 90,
+      animation: {
         animateScale: true,
-        animateRotate: true
+        animateRotate: true,
       },
-   },
-   
-});
-graphicScore.innerText = `You scored \n ${score}/${questionnum}`;  
+    },
+  });
+  graphicScore.innerText = `You scored \n ${score}/${questionnum}`;
 }
 
-// this function hides and display the results 
+// this function hides and display the results
 function showResults() {
-  if (yourAnswersContainer.style.display = "none") {
+  if (yourAnswersContainer.style.display === "none") {
     yourAnswersContainer.style.display = "block";
   } else {
     yourAnswersContainer.style.display = "none";
-   }
+  }
 }
 
 //event listeners for the category selection and the show answers
@@ -208,6 +212,4 @@ playerCategory.addEventListener("click", () => getData("Player"));
 teamCategory.addEventListener("click", () => getData("Team"));
 competitionCategory.addEventListener("click", () => getData("Competition"));
 showAnswers.addEventListener("click", () => showResults());
-
-
 

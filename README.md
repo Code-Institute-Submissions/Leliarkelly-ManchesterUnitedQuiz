@@ -5,13 +5,12 @@ README Page IN DEVELOPMENT
 
 <a>Link to the main site</a>
 
-<p>Manchester Quix App is a mutliple choice application which test the user knowledge of Manchester United providing the following user functionality
+<p>Manchester Quix App is a mutliple choice application which tests the user knowledge of Manchester United providing the following user functionality
 
 - The application will ask the user randomly ordered questions based on the category chosen by the user
 - The user answers each question and their score will increment by 1 if they answer correctly.
-- A progress bar will shows the user how many question they have remaining
-- At the end of the game a circular graphic will diplay their final score and provide an option to play the quiz again.
-- The application finally provides a summary of the answers gave for the user to compare against the correct answer.
+- A progress bar will shows the user how many question they have completed and how many they have remaining
+- At the end of the game a circular graphic will diplay their final score, a summary of their how they did and the opportunity to try the quiz again.
 
 <h2>Flowchart</h2>
 The flowchart below depict the logic underpinning the javascript code that I developed.
@@ -20,11 +19,13 @@ https://lucid.app/documents/view/23cd3b4c-e44a-4622-b63f-780f841fbac3
 
 <h2>Quiz Section</h2>
 
-1. Category section display the category of questions available:
+1. Category section display the category of questions available for Teams, Competitions and Players
 
-2. Question section display each question, progress bar, score and available answers. From some question an image is included.
+2. The home screen will randomly select a background image that will be displayed
 
-3. Result section provide summary of the results and ability to display answers
+3. Question section display each question, progress bar, score and available answers. Some question include an image which is displayed when the question is being asked.
+
+4. Result section provide summary of the results 
 
 <h2>Project Goals</h2>
 
@@ -51,7 +52,7 @@ Easily add new questions and images to the questions array without updating the 
 During development I continuously user tested. I extensively used console.log to help me understand what my code was doing.
 I recruited some testers to test my application on different application
 I carried out testing on different devices.
-I code checked on JSHINT which returned no errors.
+I code checked on JSHINT which returned 2 errors at 175 and 177 for undefined chart variables.
 I validated the markup and css code using: W3C Validator and Jigsaw Validator and return no errors
 
 <h2>Wireframes</h2>
