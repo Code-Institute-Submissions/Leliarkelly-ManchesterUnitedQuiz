@@ -168,6 +168,7 @@ div.image {
 
 .relative {
   position: relative;
+  
 }
 
 .absolute-center {
@@ -175,13 +176,14 @@ div.image {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+  }
 
 .text-center{
   font-size: 20px;
   color: #c70101;
   font-family: BebasNeueBold, Helvetica, sans-serif;
   text-align: center;
+  
 }
 
 

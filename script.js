@@ -57,7 +57,7 @@ let backgroundImage = [
 //randomise background image on home page
 let randomItem =
   backgroundImage[Math.floor(Math.random() * backgroundImage.length)];
-  document.body.style.backgroundImage = `url(images/${randomItem})`;
+document.body.style.backgroundImage = `url(images/${randomItem})`;
 
 //The getData function fetches question data from quiz.json and takes as parameter,
 // the category selected and pushes those questions to the completed question array
@@ -75,6 +75,7 @@ function getData(input) {
       }
       getNewQuestion();
       categoryContainer.style.display = "none";
+      document.body.style.backgroundImage = "none";
     })
     .catch((err) => console.log(err));
 }
@@ -82,9 +83,7 @@ function getData(input) {
 //this function will check if there is an image against a question in the quiz.json file and add to DOM if true.
 
 function checkImage() {
-  console.log(currentQuestion.image);
   if (currentQuestion.image !== undefined) {
-    document.body.style.backgroundImage = "none";
     imageURL = currentQuestion.image;
     image.style.display = "block";
     image.style.backgroundImage = `url(images/${imageURL})`;
@@ -93,7 +92,8 @@ function checkImage() {
 
 //this function will display the new Question and possible answers into the DOM
 function getNewQuestion() {
-  document.body.scrollTop = 0; // For Safari to move back to top of screen
+  document.body.style.backgroundImage = "none";
+  document.body.scrollTop = 0; //  For safari move back to top of screen
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera to move back to top of screen
   questionCounter++;
   gameProgress.innerHTML = `${questionCounter} of ${questionnum}`;
@@ -212,4 +212,3 @@ playerCategory.addEventListener("click", () => getData("Player"));
 teamCategory.addEventListener("click", () => getData("Team"));
 competitionCategory.addEventListener("click", () => getData("Competition"));
 showAnswers.addEventListener("click", () => showResults());
-
