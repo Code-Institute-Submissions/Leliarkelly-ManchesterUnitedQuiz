@@ -76,6 +76,7 @@ function getData(input) {
       getNewQuestion();
       categoryContainer.style.display = "none";
       document.body.style.backgroundImage = "none";
+      
     })
     .catch((err) => console.log(err));
 }
