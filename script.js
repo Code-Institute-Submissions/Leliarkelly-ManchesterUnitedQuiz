@@ -146,7 +146,7 @@ choices.forEach((item) => {
       getNewQuestion();
     } else {
       resulticon = "x";
-      colour = "red";
+      colour = "#c70101";
       textFeedback = "Incorrect!";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       getNewQuestion();

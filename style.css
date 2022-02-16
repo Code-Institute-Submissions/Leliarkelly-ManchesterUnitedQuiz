@@ -15,7 +15,7 @@ body {
   font-weight: 500;
   justify-content: center;
   margin: 0;
-  color: #fff;  
+  color: #fff;
 }
 
 ul {
@@ -46,10 +46,10 @@ h2 {
 }
 
 /* 1a Category container */
-  .category-container {
-    margin-top: 150px;
-    padding-top: 40px;
-    display: block;
+.category-container {
+  margin-top: 150px;
+  padding-top: 40px;
+  display: block;
 }
 
 h3 {
@@ -84,17 +84,16 @@ h3 {
   display: none;
   padding: 10px;
   margin-top: -40px;
-  
 }
 
 div.image {
   max-width: 100%;
   display: none;
-  width: 300px; 
+  width: 300px;
   height: 150px;
   margin: 0 auto;
-  padding:0; 
-  background-repeat: no-repeat;  
+  padding: 0;
+  background-repeat: no-repeat;
 }
 
 .progress {
@@ -116,7 +115,7 @@ div.image {
   text-align: center;
   width: 100%;
   font-size: 16px;
- }
+}
 
 .answers {
   margin-top: -10px;
@@ -154,33 +153,28 @@ div.image {
   padding: 10px;
   margin: 20px;
   display: none;
-} 
+}
 
 /* //credit to https://jsfiddle.net/mgyp0jkk/ for this solution to centre score inside chartJS doughnut*/
 
 .relative {
   position: relative;
-  
 }
 
 .absolute-center {
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  }
+}
 
-.text-center{
+.text-center {
   font-size: 20px;
   color: #c70101;
   text-align: center;
-  
 }
 
-
 /* <!-- 1d Your Results Container --> */
-
-
 
 .your-results-container {
   padding: 10px;
@@ -189,12 +183,10 @@ div.image {
   text-align: center;
 }
 
-
 .show-results {
   margin-top: 20px;
   background-color: transparent;
-  cursor:pointer
-
+  cursor: pointer;
 }
 
 button {
@@ -209,34 +201,27 @@ button {
 
 /* 1e Your answers container */
 
-.your-answers-container{
+.your-answers-container {
   display: flex;
   flex-direction: column;
-  align-content: center;  
-  display:none;  
+  align-content: center;
+  display: none;
 }
 
-
 #your-answers {
-  /* font-family: BebasNeueBold, Helvetica, sans-serif; */
   font-size: 12px;
   color: #fff;
   font-style: normal;
   text-align: left;
-  
 }
 
 #your-answers li {
   padding-left: 5px;
-  /* font-family: BebasNeueBold, Helvetica, sans-serif; */
   color: #010f1c;
   background-color: gainsboro;
   font-size: 14px;
- }
+}
 
- #your-answers i{
-   font-weight: 800;
-   
-
- }
-
+#your-answers i {
+  font-weight: 800;
+}
