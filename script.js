@@ -160,7 +160,6 @@ choices.forEach((item) => {
   });
 });
 
-// style="color: ${colour};"
 
 // this function is called when all the questions have been completed.  It hides questions container, and display the result containers
 
