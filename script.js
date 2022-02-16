@@ -122,7 +122,7 @@ choices.forEach((item) => {
     const correctAnswer = currentQuestion.answer;
     if (categoryQuestions.length === 0 && selectedChoice === correctAnswer) {
       resulticon = "check";
-      colour = "#228C22";
+      colour = "#00B800";
       textFeedback = "Well Done!";
       score++;
       // positionResult = (questionCounter * 100) / questionnum + "%";
@@ -133,20 +133,20 @@ choices.forEach((item) => {
       selectedChoice != correctAnswer
     ) {
       resulticon = "x";
-      colour = "#c70101";
+      colour = "#A9A9A9";
       textFeedback = "Incorrect!";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       finishGame();
     } else if (selectedChoice === correctAnswer) {
       resulticon = "check";
-      colour = "#228C22";
+      colour = "#00B800";
       textFeedback = "Well Done!";
       score++;
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       getNewQuestion();
     } else {
       resulticon = "x";
-      colour = "#c70101";
+      colour = "#A9A9A9";
       textFeedback = "Incorrect!";
       progress.style.width = (questionCounter * 100) / questionnum + "%";
       getNewQuestion();
@@ -154,7 +154,8 @@ choices.forEach((item) => {
     const compquestion = `  
     <li style ="background-color: ${colour}"><p>${question}</p> 
     <p> The correct answer is ${answertext}</p> 
-    <p> Your answer was ${youranswer}. ${textFeedback} &emsp; <i class="bi bi-${resulticon}-circle"></i></p>
+    <p> Your answer was
+    ${youranswer}. ${textFeedback} &emsp; <i class="bi bi-${resulticon}-circle"></i></p>
       </li> `;
     yourAnswers.innerHTML += compquestion;
   });
