@@ -216,12 +216,9 @@ button {
 }
 
 #your-answers li {
-  padding-left: 5px;
+  padding-left: 2px;
   color: #010f1c;
   background-color: gainsboro;
   font-size: 14px;
 }
 
-#your-answers i {
-  font-weight: 800;
-}

@@ -1,6 +1,6 @@
 [
   {
-    "question": "David Beckham scored 85 goals. How many of his tally were free-kicks?",
+    "question": "Beckham scored 85 goals. How many were free-kicks?",
     "category": "Player",
     "optiona": "14",
     "optionb": "20",
@@ -11,7 +11,7 @@
     "image": "David_Beckham_Free_Kick.jpeg"
   },
   {
-    "question": "Marcus Rashford open his goal scoring account in which year",
+    "question": "Rashford opened his goal scoring account in which year",
     "category": "Player",
     "optiona": "2015",
     "optionb": "2016",
@@ -45,7 +45,7 @@
   },
 
   {
-    "question": "Manchester United were formed as Newton Heath in which year?",
+    "question": "Man United were formed as Newton Heath in which year?",
     "category": "Team",
     "optiona": "1864",
     "optionb": "1878",
@@ -55,7 +55,7 @@
     "answer": "b"
   },
   {
-    "question": "Who did Wayne surpass to become Man Utd’s all-time top scorer?",
+    "question": "Who did Wayne surpass to become Man Utd’s top scorer?",
     "category": "Player",
     "optiona": "Denis Law",
     "optionb": "George Best",
@@ -65,7 +65,7 @@
     "answer": "d"
   },
   {
-    "question": "Which team did United beat to win the 1968 European Cup final?",
+    "question": "Which team did United beat to win the 1968 European Cup?",
     "optiona": "Benfica",
     "optionb": "Juventus",
     "optionc": "Real Madrid",
@@ -76,7 +76,7 @@
   },
 
   {
-    "question": "Who scored Man Utd’s two goals in the 1999 Champions League final?",
+    "question": "Who scored Man Utd’s 2 goals in the 1999 Champions League final?",
     "optiona": "Beckham and Solskjaer",
     "optionb": "Giggs and Sheringham",
     "optionc": "Yorke and Cole",
@@ -97,7 +97,7 @@
     "image": "Christiano_Ronaldo.jpeg"
   },
   {
-    "question": "Who scored United’s winning goal vs Liverpool in the 1996 FA Cup final?",
+    "question": "Who scored the winning goal vs Liverpool in the 1996 FA Cup final?",
     "optiona": "David Beckam",
     "optionb": "Paul Scholes",
     "optionc": "Gary Pallister",
@@ -139,7 +139,7 @@
   },
 
   {
-    "question": "Where did Man Utd lift the European Cup for the third time in 2008?",
+    "question": "Where did Man Utd lift the European Cup for the 3rd time in 2008?",
     "category": "Competition",
     "optiona": "Turin",
     "optionb": "Barcelona",
@@ -160,7 +160,7 @@
     "answer": "d"
   },
   {
-    "question": "Which team knocked Manchester United out of FA cup in 2022.  8-7 on penalties?",
+    "question": "Which team knocked out United from FA cup in 2022.  8-7 on penalties?",
     "category": "Team",
     "optiona": "Watford",
     "optionb": "Burnley",
