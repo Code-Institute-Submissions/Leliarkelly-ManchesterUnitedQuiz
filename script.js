@@ -207,8 +207,7 @@ function showResults() {
   } else {
     yourAnswersContainer.style.display = "block";
   }
-  document.body.style.backgroundImage = `url(images/${randomItem})`;
-
+  
 }
 
 //event listeners for the category selection and the show answers
